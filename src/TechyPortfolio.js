@@ -1,8 +1,8 @@
 // src/TechyPortfolio.js
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Terminal, Code, User, Mail, ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { Terminal, Code, Mail, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Project = ({ title, summary, image, details }) => {
   const [expanded, setExpanded] = useState(false);
@@ -43,7 +43,7 @@ const TechyPortfolio = () => {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -150]);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const TechyPortfolio = () => {
       }, 100);
       return () => clearTimeout(timeout);
     }
-  }, [typedText]);
+  }, [typedText, fullText]);
 
   const projects = [
     {
@@ -95,7 +95,7 @@ const TechyPortfolio = () => {
       details: (
         <>
           I led product at PhoneBelt, a car safety startup. The premise of our business is this: phone use while driving causes the majority of preventable accidents. Drivers are becoming more distracted every year and accidents are on the rise. Solutions like Android Auto and Apple CarPlay act like solutions, but counterintuitively, have been shown to increase driver distraction. PhoneBelt tracks driving behavior and allows commercial driving companies a cost-effective solution to reduce accidents. Computer vision systems are expensive and invasive, drivers don't like being watched (e.g., the Teamsters have blocked companies like UPS from installing these invasive systems). Our non-invasive approach to driver safety allows for a cheap solution that drivers love.
-          
+
           <br /><br />
           PhoneBelt's product development process from left to right: POC, MVP, Prototype, Final Product.
         </>
@@ -108,13 +108,13 @@ const TechyPortfolio = () => {
       details: (
         <>
           Car-Ching is an innovative insurtech mobile app I built. It's crafted to empower small and medium-sized insurance companies the ability to provide Usage-Based Insurance (UBI) policies.
-    
+
           <br /><br />
           <strong>Car-Ching's Value</strong>
-    
+
           <br />
           Picture an imaginary driver named Michael. He's 16 and drives incredibly safely... he drives below the speed limit, he uses his seat belt, and never uses his phone while driving. Insurers don't know that. They see a 16-year-old male, the riskiest driving demographic. Despite being a very safe driver, he's going to get grouped in as a risky driver because there is little data to prove otherwise. The Car-Ching app can track his driving using sensors built into his smartphone and help insurers provide a rate based on his specific driving characteristics. It runs in the background and while it may be a small headache to set up at first, the value of this data could be the difference between him paying $500 for insurance and $3000.
-    
+
           <br /><br />
           <strong>Trends:</strong>
           <ol className="list-decimal list-inside">
@@ -123,7 +123,7 @@ const TechyPortfolio = () => {
             <li>The movement toward AI-based and personalized insurance rates</li>
             <li>The hypersonic growth of this same technology in the commercial driving space</li>
           </ol>
-    
+
           <br />
           <ul className="list-disc list-inside">
             <li><a href="https://www.figma.com/file/Car-Chingv23Design" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Figma app: Car-Ching v2.3 Design</a></li>
@@ -140,7 +140,7 @@ const TechyPortfolio = () => {
       details: (
         <>
           Inspired by the challenges I faced during meal prepping, I developed a unique solution to the common problem of managing numerous meal prep containers. The inconvenience of juggling 20 different types of containers, each with its own peculiar shape and awkward proportions, led me to question why we can't have a single, versatile container. My design introduces a container that not only fits all your meal prep needs but also stacks efficiently. Thanks to the addition of removable dividers, meal preppers can now tailor their container to fit their meals perfectly, rather than struggling to accommodate their food in unsuitable containers.
-    
+
           <br /><br />
           <a href="https://github.com/jamescscoleman/Old-Project-Archive" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">CAD Link</a>
         </>
@@ -153,7 +153,7 @@ const TechyPortfolio = () => {
       details: (
         <>
           A fun e-commerce store I ran for a few months in 2022. I designed and sold T-shirts on Etsy with the help of Printify for logistics and Canva for designing. The store was really fun but was shockingly time-intensive. It was an exciting new challenge to try running ads and talking to customers was extremely rewarding. The shop earned a ton of revenue in just a couple of months but the profit margins were far too slim for it to be anything more than a hobby store. After a few months, I suspended the store to embark on new challenges but all the designs and content are still up. A truly novel and exciting journey.
-    
+
           <br /><br />
           <ul className="list-disc list-inside">
             <li><a href="https://github.com/jamescscoleman/BestDayUSADesigns" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Downloadable Designs</a></li>
@@ -169,7 +169,7 @@ const TechyPortfolio = () => {
       details: (
         <>
           At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours, making the game more engaging. While it might not appear to be a mechanically complex design at first, a deep dive into the CAD design file will illustrate why this is the most impressive design I have ever constructed. I used a cantilever beam to randomly pluck open the lid as well as a gear with unpredictably placed levers to create a truly random experience for the user. The final product took an entire month to design but was received very well from all participants.
-    
+
           <br /><br />
           Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DrinkyCAD on GitHub</a>
         </>
@@ -192,7 +192,7 @@ const TechyPortfolio = () => {
       details: (
         <>
           During the initial months of the pandemic, I leveraged my newfound free time and concurrent finance coursework from UC Berkeley to deep dive into the stock market. In this time, I made some highly speculative trades with an emphasis on options and futures contracts. This calculated, but admittedly risky, yielded an outstanding return. I earned the absolute (dis)pleasure of being featured on r/WallStreetBets subreddit for my cheeky pandemic investments.
-    
+
           <br /><br />
           I am absolutely not a stock guru but saw the year of 2020 to be a unique time to invest, when the institutional funds lacked the agility to quickly and effectively shift their established strategies to adapt to the rapidly changing business environment. In the months of January to May, my trades yielded a 1000% return.
         </>
@@ -204,11 +204,10 @@ const TechyPortfolio = () => {
     home: (
       <div className="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden" ref={homeRef}>
         {/* Background Image with Parallax Effect */}
-<motion.div
-  style={{ y }}
-  className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-  style={{ backgroundImage: 'url(/home-background.jpg)' }}
-></motion.div>
+        <motion.div
+          style={{ y, backgroundImage: 'url(/home-background.jpg)' }}
+          className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        ></motion.div>
 
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
@@ -225,7 +224,6 @@ const TechyPortfolio = () => {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center opacity-25"
           style={{ backgroundImage: 'url(/Graduation-BlackWhite.jpg)' }} // Updated background image
-          loading="lazy"
         ></div>
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4">
@@ -261,14 +259,12 @@ const TechyPortfolio = () => {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
           style={{ backgroundImage: 'url(/contact-background.jpg)' }}
-          loading="lazy"
         ></div>
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-white mb-6">Contact</h2>
           <p className="text-lg text-gray-300 mb-4">Feel free to reach out to chat and share ideas:</p>
           <ul className="space-y-4 text-lg text-gray-300">
-
             <li>
               <span className="font-semibold">LinkedIn:</span>{' '}
               <a href="https://www.linkedin.com/in/james--coleman/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">James Coleman</a>
@@ -335,7 +331,6 @@ const TechyPortfolio = () => {
         {/* Projects Section */}
         {sections.projects}
         <hr className="border-gray-700 my-16" /> {/* Divider */}
-
 
         {/* Contact Section */}
         {sections.contact}
