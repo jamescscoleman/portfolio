@@ -37,7 +37,7 @@ const Project = ({ title, summary, image, details }) => {
 
 const TechyPortfolio = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "Hello, I'm James Coleman. Welcome to my digital space.";
+  const fullText = "Welcome to my digital space.";
 
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
@@ -57,47 +57,25 @@ const TechyPortfolio = () => {
 
   const projects = [
     {
-      title: "James AI",
-      summary: "Got a career query? Introducing my personal AI assistant. This chatbot is made on GPT-4 and trained on my portfolio and resume to answer career questions about me.",
-      image: "/JamesAI.png",
-      details: (
-        <>
-          Got a career query? Introducing my personal AI assistant. This chatbot is made on GPT-4 and trained on my portfolio and resume to answer career questions about me.
-          <br /><br />
-          <a href="https://jamescareergpt.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">JamesCareerGPT</a>.
-        </>
-      )
-    },
-    {
-      title: "Misfit Munchies",
-      summary: "In May 2024, our team at Misfit Munchies triumphed, clinching the grand prize at the New Venture Fair!",
-      image: "/NewVentureFair.jpg",
-      details: (
-        <>
-          At Misfit Munchies, we collaborate directly with farmers to convert surplus and imperfect produce—often discarded solely for its appearance—into nutritious and delicious dog treats. Astonishingly, a significant portion of food waste stems from produce being slightly off in shape or size; crooked carrots, warped watermelons, or misshapen mangoes rarely make it to store shelves. Consumers tend to bypass these "ugly" items, impacting sales negatively, as their presence can lead to reduced overall purchases. This perfectly good food, rejected for its looks, is where we step in. Dogs, after all, are indifferent to the aesthetics of their food. By sourcing these rejected fruits and vegetables from farmers and grocery stores, we create affordable, high-quality dog treats that are not only beneficial for our planet but also offer superior nutrition compared to typical dog kibbles. Truly a win-win situation for everyone.
-        </>
-      )
-    },
-    {
-      title: "Flight Delays Model",
-      summary: "After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays.",
-      image: "/DataProject.png",
-      details: (
-        <>
-          After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays. Utilizing R, I conducted a thorough analysis to identify which airlines have the best track records and which days are most susceptible to significant delays. The findings are enlightening: to minimize delay disruptions, it's wise to avoid flying on Mondays and Fridays. Among the airlines analyzed, JetBlue emerged as the most delay-prone, averaging 36 minutes late per flight. In contrast, Alaska Airlines impressively tends to depart a few minutes ahead of schedule. This project not only provided personal closure but also equipped travelers with data-driven strategies to enhance their flying experiences.
-        </>
-      )
-    },
-    {
       title: "PhoneBelt LLC",
-      summary: "I led product at PhoneBelt, a car safety startup focused on reducing driving accidents through non-invasive technology.",
+      summary: "I founded PhoneBelt, a hardtech startup reducing commercial-fleet accidents through non-invasive driver-safety technology—leading product from concept to commercialization.",
       image: "/PCB.jpg",
       details: (
         <>
           I led product at PhoneBelt, a car safety startup. The premise of our business is this: phone use while driving causes the majority of preventable accidents. Drivers are becoming more distracted every year and accidents are on the rise. Solutions like Android Auto and Apple CarPlay act like solutions, but counterintuitively, have been shown to increase driver distraction. PhoneBelt tracks driving behavior and allows commercial driving companies a cost-effective solution to reduce accidents. Computer vision systems are expensive and invasive, drivers don't like being watched (e.g., the Teamsters have blocked companies like UPS from installing these invasive systems). Our non-invasive approach to driver safety allows for a cheap solution that drivers love.
 
           <br /><br />
-          PhoneBelt's product development process from left to right: POC, MVP, Prototype, Final Product.
+          I led development from concept through prototyping and commercialization, completed NSF I-Corps and Cornell's Rev Hardware Accelerator, and secured non-dilutive funding to support development. PhoneBelt's product development process from left to right: POC, MVP, Prototype, Final Product.
+        </>
+      )
+    },
+    {
+      title: "James AI",
+      summary: "A digital twin of me—an AI assistant trained on my projects, writing, and experience, so you can ask it anything about my work and background.",
+      image: "/JamesAI.png",
+      details: (
+        <>
+          James AI is my digital twin: a GPT-4 assistant trained on my portfolio, resume, and writing. Ask it about my projects, how I approach a problem, or my background, and it answers as me.
         </>
       )
     },
@@ -134,6 +112,49 @@ const TechyPortfolio = () => {
       )
     },
     {
+      title: "Flight Delays Model",
+      summary: "After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays.",
+      image: "/DataProject.png",
+      details: (
+        <>
+          After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays. Utilizing R, I conducted a thorough analysis to identify which airlines have the best track records and which days are most susceptible to significant delays. The findings are enlightening: to minimize delay disruptions, it's wise to avoid flying on Mondays and Fridays. Among the airlines analyzed, JetBlue emerged as the most delay-prone, averaging 36 minutes late per flight. In contrast, Alaska Airlines impressively tends to depart a few minutes ahead of schedule. This project not only provided personal closure but also equipped travelers with data-driven strategies to enhance their flying experiences.
+        </>
+      )
+    },
+    {
+      title: "Misfit Munchies",
+      summary: "In May 2024, our team at Misfit Munchies triumphed, clinching the grand prize at the New Venture Fair!",
+      image: "/NewVentureFair.jpg",
+      details: (
+        <>
+          At Misfit Munchies, we collaborate directly with farmers to convert surplus and imperfect produce—often discarded solely for its appearance—into nutritious and delicious dog treats. Astonishingly, a significant portion of food waste stems from produce being slightly off in shape or size; crooked carrots, warped watermelons, or misshapen mangoes rarely make it to store shelves. Consumers tend to bypass these "ugly" items, impacting sales negatively, as their presence can lead to reduced overall purchases. This perfectly good food, rejected for its looks, is where we step in. Dogs, after all, are indifferent to the aesthetics of their food. By sourcing these rejected fruits and vegetables from farmers and grocery stores, we create affordable, high-quality dog treats that are not only beneficial for our planet but also offer superior nutrition compared to typical dog kibbles. Truly a win-win situation for everyone.
+        </>
+      )
+    },
+    {
+      title: "WerkHaus",
+      summary: "WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022 by providing flexible office space solutions.",
+      image: "/WerkHaus.PNG",
+      details: (
+        <>
+          WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022. It's essentially the Uber for underutilized office spaces, addressing the common issue of vacant offices in limbo, awaiting new leases. WerkHaus provides a dynamic solution for temporary building usage, bridging the gap between leases by connecting these empty spaces with those in need of short-term office solutions. This innovative approach not only maximizes the utility of commercial real estate but also offers businesses flexibility and efficiency in finding temporary workspaces.
+        </>
+      )
+    },
+    {
+      title: "Drinky: Innovating Social Gatherings",
+      summary: "At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games.",
+      image: "/DrinkyCAD.png",
+      details: (
+        <>
+          At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours, making the game more engaging. While it might not appear to be a mechanically complex design at first, a deep dive into the CAD design file will illustrate why this is the most impressive design I have ever constructed. I used a cantilever beam to randomly pluck open the lid as well as a gear with unpredictably placed levers to create a truly random experience for the user. The final product took an entire month to design but was received very well from all participants.
+
+          <br /><br />
+          Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DrinkyCAD on GitHub</a>
+        </>
+      )
+    },
+    {
       title: "Redesigned Food Container",
       summary: "Inspired by meal prepping challenges, I developed a versatile container with removable dividers for better food storage and organization.",
       image: "/foodcontainer1.jpg",
@@ -163,38 +184,15 @@ const TechyPortfolio = () => {
       )
     },
     {
-      title: "Drinky: Innovating Social Gatherings",
-      summary: "At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games.",
-      image: "/DrinkyCAD.png",
-      details: (
-        <>
-          At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours, making the game more engaging. While it might not appear to be a mechanically complex design at first, a deep dive into the CAD design file will illustrate why this is the most impressive design I have ever constructed. I used a cantilever beam to randomly pluck open the lid as well as a gear with unpredictably placed levers to create a truly random experience for the user. The final product took an entire month to design but was received very well from all participants.
-
-          <br /><br />
-          Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DrinkyCAD on GitHub</a>
-        </>
-      )
-    },
-    {
-      title: "WerkHaus",
-      summary: "WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022 by providing flexible office space solutions.",
-      image: "/WerkHaus.PNG",
-      details: (
-        <>
-          WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022. It's essentially the Uber for underutilized office spaces, addressing the common issue of vacant offices in limbo, awaiting new leases. WerkHaus provides a dynamic solution for temporary building usage, bridging the gap between leases by connecting these empty spaces with those in need of short-term office solutions. This innovative approach not only maximizes the utility of commercial real estate but also offers businesses flexibility and efficiency in finding temporary workspaces.
-        </>
-      )
-    },
-    {
       title: "Equity Research",
-      summary: "Leveraged finance skills during the pandemic to execute speculative trades, achieving a 1000% return and featuring on r/WallStreetBets.",
-      image: "/EquityReseearch.JPG",
+      summary: "A calculated bet during the 2020 market dislocation: I used my finance training to build a thesis around volatility and institutional inertia, which returned 1000% over five months.",
+      image: "/EquityResearch.JPG",
       details: (
         <>
-          During the initial months of the pandemic, I leveraged my newfound free time and concurrent finance coursework from UC Berkeley to deep dive into the stock market. In this time, I made some highly speculative trades with an emphasis on options and futures contracts. This calculated, but admittedly risky, yielded an outstanding return. I earned the absolute (dis)pleasure of being featured on r/WallStreetBets subreddit for my cheeky pandemic investments.
+          During the early months of the 2020 pandemic, I paired my finance coursework at UC Berkeley with a simple thesis: in a period of extreme dislocation, large institutional funds lacked the agility to quickly shift their established strategies, creating mispriced opportunities for a nimble individual investor. I built positions around that thesis using options and futures—calculated, but admittedly risky.
 
           <br /><br />
-          I am absolutely not a stock guru but saw the year of 2020 to be a unique time to invest, when the institutional funds lacked the agility to quickly and effectively shift their established strategies to adapt to the rapidly changing business environment. In the months of January to May, my trades yielded a 1000% return.
+          From January to May, the trades returned roughly 1000%, aggressive enough to (dis)honorably earn me a feature on the r/WallStreetBets subreddit. I'm not a stock guru, and I treat it as exactly what it was—a specific thesis for a specific moment—but it remains a useful reminder of what conviction plus timing can do.
         </>
       )
     }
@@ -212,9 +210,11 @@ const TechyPortfolio = () => {
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
         {/* Content */}
-        <div className="relative z-10 px-4">
+        <div className="relative z-10 px-4 max-w-3xl">
           <h1 className="text-5xl font-bold mb-4 text-white">{typedText}</h1>
-          <p className="text-2xl text-gray-300">Builder | Technologist | Student</p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Building hardware taught me that mistakes are expensive. Building software taught me that iteration is everything. Today, I combine both as a product leader.
+          </p>
         </div>
       </div>
     ),
@@ -229,10 +229,16 @@ const TechyPortfolio = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
           <p className="text-lg text-gray-300 mb-4">
-            I love to learn new things. I have 5 associate degrees, a bachelor's degree, and am progressing towards a master's degree. I have attended 5 universities spanning California, New York, and Mexico and have had the opportunity to work in distinct departments including finance, product management, and hardware engineering.
+            I build products. Today that means leading product at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using.
           </p>
           <p className="text-lg text-gray-300 mb-4">
-            A key moment in my journey was when I started at Cornell's hardware engineering accelerator and learned firsthand about product management, adding frameworks, iterative development, and prioritization principles to my repertoire. At Berkeley, I learned to be a perfectionist; at Cornell, I learned to be efficient. At Berkeley, I learned the "How," and at Cornell, I learned the "What" and the "Why."
+            I took the scenic route to get here: I founded a hardtech startup, spent a year in investment banking on M&amp;A deals, trained as an econometrician at Berkeley, and I'm finishing a Master's in Data Science at UT Austin. Different rooms, same job—figure out what's worth building, then build it without the bloat.
+          </p>
+          <p className="text-lg text-gray-300 mb-4">
+            The lesson that stuck came from two campuses. Berkeley made me a perfectionist—the "How." Cornell's hardware accelerator made me efficient—the "What" and the "Why." I try to keep one of each on my shoulder.
+          </p>
+          <p className="text-lg text-gray-300 mb-4">
+            By nature I'm a relentless learner—five associate degrees, five universities, three countries—but the curiosity has a target now: building great products.
           </p>
           <h3 className="text-2xl font-semibold text-white mb-2">Philosophies</h3>
           <ul className="list-disc list-inside text-lg text-gray-300">
