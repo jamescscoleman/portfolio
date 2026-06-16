@@ -58,11 +58,11 @@ const TechyPortfolio = () => {
   const projects = [
     {
       title: "PhoneBelt LLC",
-      summary: "I founded PhoneBelt, a hardtech startup reducing commercial-fleet accidents through non-invasive driver-safety technology—leading product from concept to commercialization.",
+      summary: "PhoneBelt was a hardtech startup I founded to reduce commercial-fleet accidents with non-invasive driver-safety hardware. I led product from concept through commercialization.",
       image: "/PCB.jpg",
       details: (
         <>
-          I led product at PhoneBelt, a car safety startup. The premise of our business is this: phone use while driving causes the majority of preventable accidents. Drivers are becoming more distracted every year and accidents are on the rise. Solutions like Android Auto and Apple CarPlay act like solutions, but counterintuitively, have been shown to increase driver distraction. PhoneBelt tracks driving behavior and allows commercial driving companies a cost-effective solution to reduce accidents. Computer vision systems are expensive and invasive, drivers don't like being watched (e.g., the Teamsters have blocked companies like UPS from installing these invasive systems). Our non-invasive approach to driver safety allows for a cheap solution that drivers love.
+          I led product at PhoneBelt, a car safety startup. The premise of our business is this: phone use while driving causes the majority of preventable accidents. Drivers are becoming more distracted every year and accidents are on the rise. Solutions like Android Auto and Apple CarPlay act like solutions, but counterintuitively, have been shown to increase driver distraction. PhoneBelt tracks driving behavior and allows commercial driving companies a cost-effective solution to reduce accidents. Computer vision systems are expensive and invasive, drivers don't like being watched (e.g., the Teamsters have blocked companies like UPS from installing these invasive systems). Our non-invasive approach kept costs low and gave drivers something they were actually willing to live with.
 
           <br /><br />
           I led development from concept through prototyping and commercialization, completed NSF I-Corps and Cornell's Rev Hardware Accelerator, and secured non-dilutive funding to support development. PhoneBelt's product development process from left to right: POC, MVP, Prototype, Final Product.
@@ -81,11 +81,11 @@ const TechyPortfolio = () => {
     },
     {
       title: "Car-Ching App",
-      summary: "Car-Ching is an innovative insurtech mobile app designed to empower insurance companies with Usage-Based Insurance (UBI) policies.",
+      summary: "Car-Ching is an insurtech mobile app I built to help insurance companies offer Usage-Based Insurance (UBI) policies.",
       image: "/Car-Ching.png",
       details: (
         <>
-          Car-Ching is an innovative insurtech mobile app I built. It's crafted to empower small and medium-sized insurance companies the ability to provide Usage-Based Insurance (UBI) policies.
+          Car-Ching is an insurtech mobile app I built to give small and medium-sized insurance companies a way to offer Usage-Based Insurance (UBI) policies.
 
           <br /><br />
           <strong>Car-Ching's Value</strong>
@@ -117,27 +117,27 @@ const TechyPortfolio = () => {
       image: "/DataProject.png",
       details: (
         <>
-          After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays. Utilizing R, I conducted a thorough analysis to identify which airlines have the best track records and which days are most susceptible to significant delays. The findings are enlightening: to minimize delay disruptions, it's wise to avoid flying on Mondays and Fridays. Among the airlines analyzed, JetBlue emerged as the most delay-prone, averaging 36 minutes late per flight. In contrast, Alaska Airlines impressively tends to depart a few minutes ahead of schedule. This project not only provided personal closure but also equipped travelers with data-driven strategies to enhance their flying experiences.
+          After experiencing a prolonged 6-hour delay with Spirit Airlines, I was motivated to delve into the performance of various airlines regarding flight delays. Utilizing R, I conducted a thorough analysis to identify which airlines have the best track records and which days are most susceptible to significant delays. A few findings stood out: to minimize delays, avoid flying on Mondays and Fridays. Among the airlines analyzed, JetBlue was the most delay-prone, averaging 36 minutes late per flight, while Alaska Airlines tended to depart a few minutes ahead of schedule. It started as a way to get some closure on a bad travel day and turned into a small, data-driven guide for picking flights.
         </>
       )
     },
     {
       title: "Misfit Munchies",
-      summary: "In May 2024, our team at Misfit Munchies triumphed, clinching the grand prize at the New Venture Fair!",
+      summary: "Misfit Munchies turns surplus and imperfect produce into dog treats. In May 2024, the team won the grand prize at the New Venture Fair.",
       image: "/NewVentureFair.jpg",
       details: (
         <>
-          At Misfit Munchies, we collaborate directly with farmers to convert surplus and imperfect produce—often discarded solely for its appearance—into nutritious and delicious dog treats. Astonishingly, a significant portion of food waste stems from produce being slightly off in shape or size; crooked carrots, warped watermelons, or misshapen mangoes rarely make it to store shelves. Consumers tend to bypass these "ugly" items, impacting sales negatively, as their presence can lead to reduced overall purchases. This perfectly good food, rejected for its looks, is where we step in. Dogs, after all, are indifferent to the aesthetics of their food. By sourcing these rejected fruits and vegetables from farmers and grocery stores, we create affordable, high-quality dog treats that are not only beneficial for our planet but also offer superior nutrition compared to typical dog kibbles. Truly a win-win situation for everyone.
+          At Misfit Munchies, we work directly with farmers to turn surplus and imperfect produce—often discarded just for how it looks—into dog treats. A meaningful share of food waste comes from produce being slightly off in shape or size: crooked carrots, warped watermelons, misshapen mangoes that rarely make it to store shelves. Dogs don't care what their food looks like, so we source this rejected produce from farmers and grocery stores and make affordable, nutritious treats from it. It's a practical use for food that would otherwise go to waste.
         </>
       )
     },
     {
       title: "WerkHaus",
-      summary: "WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022 by providing flexible office space solutions.",
+      summary: "WerkHaus, built during Startup Weekend, won Best Business in 2022. It connects underused office space with people who need short-term workspace.",
       image: "/WerkHaus.PNG",
       details: (
         <>
-          WerkHaus, our venture born during Startup Weekend, clinched the title of Best Business in 2022. It's essentially the Uber for underutilized office spaces, addressing the common issue of vacant offices in limbo, awaiting new leases. WerkHaus provides a dynamic solution for temporary building usage, bridging the gap between leases by connecting these empty spaces with those in need of short-term office solutions. This innovative approach not only maximizes the utility of commercial real estate but also offers businesses flexibility and efficiency in finding temporary workspaces.
+          WerkHaus, built during Startup Weekend, won Best Business in 2022. It's essentially the Uber for underutilized office space, addressing the problem of vacant offices sitting in limbo between leases. WerkHaus bridges that gap by connecting empty spaces with people who need short-term offices. The idea was to make better use of commercial real estate while giving businesses a flexible way to find temporary space.
         </>
       )
     },
@@ -147,7 +147,7 @@ const TechyPortfolio = () => {
       image: "/DrinkyCAD.png",
       details: (
         <>
-          At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours, making the game more engaging. While it might not appear to be a mechanically complex design at first, a deep dive into the CAD design file will illustrate why this is the most impressive design I have ever constructed. I used a cantilever beam to randomly pluck open the lid as well as a gear with unpredictably placed levers to create a truly random experience for the user. The final product took an entire month to design but was received very well from all participants.
+          At a Global Game Jam, I created Drinky, a 3D-printed game that adds a twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours. It looks simple, but the CAD is the part I'm most proud of: a cantilever beam plucks the lid open, and a gear with unevenly placed levers makes each pour unpredictable. The final design took about a month, and it went over well with the people who played it.
 
           <br /><br />
           Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DrinkyCAD on GitHub</a>
@@ -160,7 +160,7 @@ const TechyPortfolio = () => {
       image: "/foodcontainer1.jpg",
       details: (
         <>
-          Inspired by the challenges I faced during meal prepping, I developed a unique solution to the common problem of managing numerous meal prep containers. The inconvenience of juggling 20 different types of containers, each with its own peculiar shape and awkward proportions, led me to question why we can't have a single, versatile container. My design introduces a container that not only fits all your meal prep needs but also stacks efficiently. Thanks to the addition of removable dividers, meal preppers can now tailor their container to fit their meals perfectly, rather than struggling to accommodate their food in unsuitable containers.
+          This came out of my own frustration with meal prep: juggling 20 different containers, each with its own odd shape and awkward proportions, made me wonder why there isn't just one versatile container. My design is a single container that stacks efficiently, with removable dividers so you can adjust it to whatever you're storing instead of owning a drawer full of mismatched ones.
 
           <br /><br />
           <a href="https://github.com/jamescscoleman/Old-Project-Archive" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">CAD Link</a>
@@ -173,7 +173,7 @@ const TechyPortfolio = () => {
       image: "/BestDayUSA.png",
       details: (
         <>
-          A fun e-commerce store I ran for a few months in 2022. I designed and sold T-shirts on Etsy with the help of Printify for logistics and Canva for designing. The store was really fun but was shockingly time-intensive. It was an exciting new challenge to try running ads and talking to customers was extremely rewarding. The shop earned a ton of revenue in just a couple of months but the profit margins were far too slim for it to be anything more than a hobby store. After a few months, I suspended the store to embark on new challenges but all the designs and content are still up. A truly novel and exciting journey.
+          An e-commerce store I ran for a few months in 2022. I designed and sold T-shirts on Etsy, using Printify for logistics and Canva for design. It was more time-intensive than I expected, but running ads and talking to customers was the most fun part. The shop pulled in decent revenue over a couple of months, but the margins were too slim for it to be more than a hobby. I eventually paused it to focus on other things, though the designs and content are still up.
 
           <br /><br />
           <ul className="list-disc list-inside">
@@ -242,7 +242,10 @@ const TechyPortfolio = () => {
     ),
     projects: (
       <div className="w-full py-20 flex flex-col items-center justify-center" id="projects" ref={projectsRef}>
-        <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Projects</h2>
+        <p className="text-gray-400 mb-8 max-w-2xl text-center px-4">
+          A collection of things I've built alongside my career—startups, hardware, data, and a few odd experiments.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
           {projects.map((project, index) => (
             <Project key={index} {...project} />
