@@ -229,22 +229,13 @@ const TechyPortfolio = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
           <p className="text-lg text-gray-300 mb-4">
-            I build products. Today that means leading product at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using.
-          </p>
-          <p className="text-lg text-gray-300 mb-4">
-            I took the scenic route to get here: I founded a hardtech startup, spent a year in investment banking on M&amp;A deals, trained as an econometrician at Berkeley, and I'm finishing a Master's in Data Science at UT Austin. Different rooms, same job—figure out what's worth building, then build it without the bloat.
-          </p>
-          <p className="text-lg text-gray-300 mb-4">
-            The lesson that stuck came from two campuses. Berkeley made me a perfectionist—the "How." Cornell's hardware accelerator made me efficient—the "What" and the "Why." I try to keep one of each on my shoulder.
-          </p>
-          <p className="text-lg text-gray-300 mb-4">
-            By nature I'm a relentless learner—five associate degrees, five universities, three countries—but the curiosity has a target now: building great products.
+            I build products. Today that means leading product at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using. I took the scenic route to get here: I founded a hardtech startup, then spent a year in investment banking on M&amp;A deals. By nature I'm a relentless learner—five universities, two countries—but these days that curiosity is focused on one thing: building great products.
           </p>
           <h3 className="text-2xl font-semibold text-white mb-2">Philosophies</h3>
           <ul className="list-disc list-inside text-lg text-gray-300">
-            <li>Pareto Principle: 80% of results come from 20% of the effort.</li>
-            <li>Build fast and iterate: Treat ideas as hypotheses. No one is Nostradamus.</li>
-            <li>Invest in people: Teams are the real IP.</li>
+            <li>80% of results come from 20% of the effort.</li>
+            <li>Treat ideas as hypotheses.</li>
+            <li>If you want to go fast, go alone. If you want to go far, go together.</li>
           </ul>
         </div>
       </div>
