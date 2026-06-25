@@ -1,25 +1,25 @@
 // src/TechyPortfolio.js
 
-import React, { useState, useEffect, useRef } from 'react';
-import { Terminal, Code, Mail, ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Project = ({ title, summary, image, details }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+    <div className="bg-surface border border-hairline p-6 rounded-xl transition-colors duration-300 hover:border-accent/40">
       <img
         src={image}
         alt={`${title} screenshot`}
-        className="w-full h-72 object-cover rounded-lg mb-4"
+        className="w-full h-72 object-cover rounded-lg mb-5"
         loading="lazy"
       />
-      <h3 className="text-2xl font-bold mb-2 text-white">{title}</h3>
-      <p className="mb-4 text-gray-300">{summary}</p>
+      <h3 className="text-2xl font-display font-semibold mb-2 text-cream">{title}</h3>
+      <p className="mb-4 text-muted leading-relaxed">{summary}</p>
       <button
         onClick={() => setExpanded(!expanded)}
-        className="flex items-center text-blue-400 hover:text-blue-300 focus:outline-none"
+        className="flex items-center text-accent hover:text-accent-soft focus:outline-none"
         aria-expanded={expanded}
         aria-controls={`${title}-details`}
       >
@@ -27,7 +27,7 @@ const Project = ({ title, summary, image, details }) => {
         {expanded ? <ChevronUp size={20} className="ml-2" /> : <ChevronDown size={20} className="ml-2" />}
       </button>
       {expanded && (
-        <div id={`${title}-details`} className="mt-4 text-gray-300 space-y-2">
+        <div id={`${title}-details`} className="mt-4 text-muted leading-relaxed space-y-2">
           {details}
         </div>
       )}
@@ -36,25 +36,6 @@ const Project = ({ title, summary, image, details }) => {
 };
 
 const TechyPortfolio = () => {
-  const [typedText, setTypedText] = useState('');
-  const fullText = "Welcome to my digital space.";
-
-  const homeRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
-
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, -150]);
-
-  useEffect(() => {
-    if (typedText.length < fullText.length) {
-      const timeout = setTimeout(() => {
-        setTypedText(fullText.slice(0, typedText.length + 1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [typedText, fullText]);
-
   const projects = [
     {
       title: "PhoneBelt LLC",
@@ -104,9 +85,9 @@ const TechyPortfolio = () => {
 
           <br />
           <ul className="list-disc list-inside">
-            <li><a href="https://www.figma.com/file/Car-Chingv23Design" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Figma app: Car-Ching v2.3 Design</a></li>
-            <li><a href="https://github.com/jamescscoleman/Car-Ching" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">GitHub: Car-Ching on GitHub</a></li>
-            <li><a href="https://www.car-ching.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Website: Car-Ching</a></li>
+            <li><a href="https://www.figma.com/file/Car-Chingv23Design" target="_blank" rel="noopener noreferrer" className="text-accent underline">Figma app: Car-Ching v2.3 Design</a></li>
+            <li><a href="https://github.com/jamescscoleman/Car-Ching" target="_blank" rel="noopener noreferrer" className="text-accent underline">GitHub: Car-Ching on GitHub</a></li>
+            <li><a href="https://www.car-ching.com" target="_blank" rel="noopener noreferrer" className="text-accent underline">Website: Car-Ching</a></li>
           </ul>
         </>
       )
@@ -150,7 +131,7 @@ const TechyPortfolio = () => {
           At a Global Game Jam, I created Drinky, a 3D-printed game that adds a twist to traditional drinking games. Designed in Fusion 360, Drinky uses a mechanical system to randomize drink pours. It looks simple, but the CAD is the part I'm most proud of: a cantilever beam plucks the lid open, and a gear with unevenly placed levers makes each pour unpredictable. The final design took about a month, and it went over well with the people who played it.
 
           <br /><br />
-          Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">DrinkyCAD on GitHub</a>
+          Printed with PLA, the final product was coated with high-quality paint and food-safe epoxy resin to allow for a safe playing experience. For those interested in the technical details or looking to create their own Drinky, the Fusion 360 design files and documentation are available at: <a href="https://github.com/jamescscoleman/DrinkyCAD" target="_blank" rel="noopener noreferrer" className="text-accent underline">DrinkyCAD on GitHub</a>
         </>
       )
     },
@@ -163,7 +144,7 @@ const TechyPortfolio = () => {
           This came out of my own frustration with meal prep: juggling 20 different containers, each with its own odd shape and awkward proportions, made me wonder why there isn't just one versatile container. My design is a single container that stacks efficiently, with removable dividers so you can adjust it to whatever you're storing instead of owning a drawer full of mismatched ones.
 
           <br /><br />
-          <a href="https://github.com/jamescscoleman/Old-Project-Archive" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">CAD Link</a>
+          <a href="https://github.com/jamescscoleman/Old-Project-Archive" target="_blank" rel="noopener noreferrer" className="text-accent underline">CAD Link</a>
         </>
       )
     },
@@ -177,8 +158,8 @@ const TechyPortfolio = () => {
 
           <br /><br />
           <ul className="list-disc list-inside">
-            <li><a href="https://github.com/jamescscoleman/BestDayUSADesigns" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Downloadable Designs</a></li>
-            <li><a href="https://www.etsy.com/shop/BestDayUSA" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Etsy Shop</a></li>
+            <li><a href="https://github.com/jamescscoleman/BestDayUSADesigns" target="_blank" rel="noopener noreferrer" className="text-accent underline">Downloadable Designs</a></li>
+            <li><a href="https://www.etsy.com/shop/BestDayUSA" target="_blank" rel="noopener noreferrer" className="text-accent underline">Etsy Shop</a></li>
           </ul>
         </>
       )
@@ -198,23 +179,56 @@ const TechyPortfolio = () => {
     }
   ];
 
+  const projectOrder = [
+    'PhoneBelt LLC',
+    'Misfit Munchies',
+    'Flight Delays Model',
+    'Equity Research',
+    'Car-Ching App',
+    'Redesigned Food Container',
+    'James AI',
+    'BestDayUSA',
+    'Drinky: Innovating Social Gatherings',
+    'WerkHaus',
+  ];
+  const rankedProjects = projectOrder.map((title) => projects.find((p) => p.title === title));
+
+  const featured = [
+    'PhoneBelt LLC',
+    'Equity Research',
+    'Drinky: Innovating Social Gatherings',
+    'Misfit Munchies',
+    'Car-Ching App',
+    'James AI',
+  ].map((title) => projects.find((p) => p.title === title));
+
   const sections = {
     home: (
-      <div className="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden" ref={homeRef}>
-        {/* Background Image with Parallax Effect */}
-        <motion.div
-          style={{ y, backgroundImage: 'url(/home-background.jpg)' }}
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        ></motion.div>
-
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
-        {/* Content */}
-        <div className="relative z-10 px-4 max-w-3xl">
-          <h1 className="text-5xl font-bold mb-4 text-white">{typedText}</h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Building hardware taught me that mistakes are expensive. Building software taught me that iteration is everything. Today, I combine both as a product leader.
-          </p>
+      <div className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-16 py-20 max-w-7xl mx-auto">
+        <p className="text-sm uppercase tracking-[0.25em] text-accent mb-4">James Coleman</p>
+        <h1 className="text-5xl md:text-7xl font-display font-semibold tracking-tight text-cream mb-10">A few things I've built.</h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {featured.map((project, index) => (
+            <motion.a
+              key={index}
+              href="#projects"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="group relative block overflow-hidden rounded-lg"
+            >
+              <img
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="w-full h-40 md:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <span className="absolute bottom-3 left-4 right-4 text-cream font-semibold">
+                {project.title.split(':')[0]}
+              </span>
+            </motion.a>
+          ))}
         </div>
       </div>
     ),
@@ -227,12 +241,12 @@ const TechyPortfolio = () => {
         ></div>
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
-          <p className="text-lg text-gray-300 mb-4">
-            I build products. Today that means leading product at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using. I took the scenic route to get here: I founded a hardtech startup, then spent a year in investment banking on M&amp;A deals. By nature I'm a relentless learner—five universities, two countries—but these days that curiosity is focused on one thing: building great products.
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-6">About Me</h2>
+          <p className="text-lg text-cream/85 leading-relaxed mb-6">
+            I build products. Today that means leading product at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using. I took the scenic route to get here. I founded a hardtech startup, then worked in mergers and acquisitions. I'm a relentless learner by nature, but these days that curiosity points at one thing: building great products.
           </p>
-          <h3 className="text-2xl font-semibold text-white mb-2">Philosophies</h3>
-          <ul className="list-disc list-inside text-lg text-gray-300">
+          <h3 className="text-2xl font-display font-semibold text-cream mb-3">Philosophies</h3>
+          <ul className="list-disc list-inside text-lg text-muted space-y-1 marker:text-accent">
             <li>80% of results come from 20% of the effort.</li>
             <li>Treat ideas as hypotheses.</li>
             <li>If you want to go fast, go alone. If you want to go far, go together.</li>
@@ -241,20 +255,20 @@ const TechyPortfolio = () => {
       </div>
     ),
     projects: (
-      <div className="w-full py-20 flex flex-col items-center justify-center" id="projects" ref={projectsRef}>
-        <h2 className="text-3xl font-bold text-white mb-2">Projects</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl text-center px-4">
+      <div className="w-full py-20 flex flex-col items-center justify-center" id="projects">
+        <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-2">Projects</h2>
+        <p className="text-muted mb-10 max-w-2xl text-center px-4 leading-relaxed">
           A collection of things I've built alongside my career—startups, hardware, data, and a few odd experiments.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
-          {projects.map((project, index) => (
+          {rankedProjects.map((project, index) => (
             <Project key={index} {...project} />
           ))}
         </div>
       </div>
     ),
     contact: (
-      <div className="relative w-full py-20 flex items-center justify-center" id="contact" ref={contactRef}>
+      <div className="relative w-full py-20 flex items-center justify-center" id="contact">
         {/* Background Image */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
@@ -262,16 +276,16 @@ const TechyPortfolio = () => {
         ></div>
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white mb-6">Contact</h2>
-          <p className="text-lg text-gray-300 mb-4">Feel free to reach out to chat and share ideas:</p>
-          <ul className="space-y-4 text-lg text-gray-300">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-6">Contact</h2>
+          <p className="text-lg text-muted mb-6">If something here sparked an idea, let's talk it over coffee:</p>
+          <ul className="space-y-4 text-lg text-cream">
             <li>
               <span className="font-semibold">LinkedIn:</span>{' '}
-              <a href="https://www.linkedin.com/in/james--coleman/" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">James Coleman</a>
+              <a href="https://www.linkedin.com/in/james--coleman/" target="_blank" rel="noopener noreferrer" className="text-accent underline">James Coleman</a>
             </li>
             <li>
               <span className="font-semibold">GitHub:</span>{' '}
-              <a href="https://github.com/jamescscoleman" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">jamescscoleman</a>
+              <a href="https://github.com/jamescscoleman" target="_blank" rel="noopener noreferrer" className="text-accent underline">jamescscoleman</a>
             </li>
           </ul>
         </div>
@@ -279,62 +293,20 @@ const TechyPortfolio = () => {
     )
   };
 
-  // Sidebar items with CSS-based tooltips
-  const sidebarItems = [
-    { icon: <Terminal size={24} />, section: 'home', label: 'Home' },
-    { icon: <Code size={24} />, section: 'projects', label: 'Projects' },
-    { icon: <Mail size={24} />, section: 'contact', label: 'Contact' },
-  ];
-
-  // Scroll to section handler
-  const scrollToSection = (section) => {
-    if (section === 'home') {
-      homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (section === 'projects') {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (section === 'contact') {
-      contactRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className="flex min-h-screen bg-black text-gray-300">
-      {/* Sidebar */}
-      <div className="w-20 bg-gray-800 flex flex-col items-center py-8 fixed h-full">
-        {sidebarItems.map((item, index) => (
-          <div key={index} className="relative group">
-            <button
-              onClick={() => scrollToSection(item.section)}
-              className={`p-4 mb-6 rounded-full focus:outline-none ${
-                item.section === 'home' ? 'bg-blue-600' : 'hover:bg-gray-700'
-              }`}
-              aria-label={item.label}
-            >
-              {item.icon}
-            </button>
-            {/* Tooltip */}
-            <span className="absolute left-20 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-              {item.label}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="min-h-screen bg-ink text-cream">
+      {/* Home Section */}
+      {sections.home}
 
-      {/* Main content */}
-      <div className="flex-1 ml-20">
-        {/* Home Section */}
-        {sections.home}
+      {/* About Me Section */}
+      {sections.about}
 
-        {/* About Me Section */}
-        {sections.about}
+      {/* Projects Section */}
+      {sections.projects}
+      <hr className="border-hairline my-16" /> {/* Divider */}
 
-        {/* Projects Section */}
-        {sections.projects}
-        <hr className="border-gray-700 my-16" /> {/* Divider */}
-
-        {/* Contact Section */}
-        {sections.contact}
-      </div>
+      {/* Contact Section */}
+      {sections.contact}
     </div>
   );
 };
