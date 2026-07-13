@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Assets
+
+Source images and other portfolio material live in **`portfolio-assets/`** — a *separate* git repo, **gitignored** by this one, that holds full-resolution originals, CAD/print exports, and documents. Nothing there is deployed. The site serves only the optimized copies in **`public/`** (`portfolio-assets/` → `public/` → `build/` → Netlify). See [`portfolio-assets/README.md`](portfolio-assets/README.md) for the source→output pipeline, and [`docs/asset-reorg-plan.md`](docs/asset-reorg-plan.md) for how this was set up.
+
 ## Available Scripts
 
 In the project directory, you can run:
