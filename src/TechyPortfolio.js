@@ -82,8 +82,11 @@ const TechyPortfolio = () => {
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-6">About Me</h2>
+          <p className="text-lg text-cream/85 leading-relaxed mb-4">
+            I build products — specifically, the ones that don't exist yet. I took the scenic route here, and each stop set up the next. I started by founding a hardware startup: zero to one, from a blank page to a shipped physical product — and hardware is unforgiving, so it taught me that mistakes are expensive and you can't patch an object after it's out the door. Then I moved into mergers and acquisitions, where I learned to see what actually makes a business valuable — really, the question of what's worth building at all. From there I moved into software, where iteration is cheap and a good idea can reach people in days.
+          </p>
           <p className="text-lg text-cream/85 leading-relaxed mb-6">
-            I build products. Today that means leading the Innovation product team at PureSpectrum, turning the messy, complicated world of market-research software into tools people actually like using. I took the scenic route to get here. I founded a hardtech startup, then worked in mergers and acquisitions. I'm a relentless learner by nature, but these days that curiosity points at one thing: building great products.
+            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research — and it's zero to one all over again: less about polishing what exists, more about creating capabilities that weren't possible before. That's the part I find most exciting — taking what's newly possible and turning it into products an entire industry can use.
           </p>
           <h3 className="text-2xl font-display font-semibold text-cream mb-3">Philosophies</h3>
           <ul className="list-disc list-inside text-lg text-muted space-y-1 marker:text-accent">
