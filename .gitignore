@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Source-asset archive (its own git repo; never tracked here, never deployed)
+/portfolio-assets/
