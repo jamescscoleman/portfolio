@@ -186,6 +186,13 @@ const sourceProjects = [
     ],
     gallery: [
       {
+        src: '/harvey-gameplay.mp4',
+        video: true,
+        poster: '/harvey-video-poster.jpg',
+        caption:
+          'Real gameplay — dismantling the prosecution’s case, one witness at a time (27s, tap to play)',
+      },
+      {
         src: '/harvey-ui.png',
         caption:
           'The battle board — the prosecution’s witnesses and evidence up top, your Action Points and moves below',

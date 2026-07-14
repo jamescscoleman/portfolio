@@ -7,7 +7,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ArrowUpRight, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Play, X } from 'lucide-react';
 import {
   projects,
   getProject,
@@ -221,14 +221,21 @@ const ProjectPage = () => {
                 <button
                   type="button"
                   onClick={() => setLightbox(shot)}
-                  className="block w-full overflow-hidden rounded-xl border border-hairline"
+                  className="relative block w-full overflow-hidden rounded-xl border border-hairline"
                 >
                   <img
-                    src={shot.src}
+                    src={shot.video ? shot.poster : shot.src}
                     alt={shot.caption || ''}
                     loading="lazy"
                     className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
+                  {shot.video && (
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink/80 text-accent backdrop-blur transition-transform group-hover:scale-110">
+                        <Play size={24} className="ml-0.5" fill="currentColor" />
+                      </span>
+                    </span>
+                  )}
                 </button>
                 {shot.caption ? (
                   <figcaption className="mt-2 text-sm text-muted">{shot.caption}</figcaption>
@@ -292,11 +299,23 @@ const ProjectPage = () => {
               onClick={(e) => e.stopPropagation()}
               className="max-h-full max-w-4xl"
             >
-              <img
-                src={lightbox.src}
-                alt={lightbox.caption || ''}
-                className="max-h-[80vh] w-auto rounded-xl border border-hairline object-contain"
-              />
+              {lightbox.video ? (
+                <video
+                  src={lightbox.src}
+                  poster={lightbox.poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  loop
+                  className="max-h-[80vh] w-auto rounded-xl border border-hairline"
+                />
+              ) : (
+                <img
+                  src={lightbox.src}
+                  alt={lightbox.caption || ''}
+                  className="max-h-[80vh] w-auto rounded-xl border border-hairline object-contain"
+                />
+              )}
               {lightbox.caption ? (
                 <figcaption className="mt-3 text-center text-sm text-muted">
                   {lightbox.caption}
