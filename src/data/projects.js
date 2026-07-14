@@ -120,6 +120,71 @@ const sourceProjects = [
   },
 
   {
+    slug: 'harvey',
+    title: 'Harvey',
+    shortTitle: 'Harvey',
+    tagline:
+      'A turn-based tactical courtroom game where you play a defense attorney dismantling the prosecution’s case — currently in development.',
+    summary:
+      'A tactical puzzle game I’m building: outwit the prosecution witness by witness, exhibit by exhibit, before your case falls apart. In active development.',
+    hero: '/harvey.jpg',
+    meta: {
+      role: 'Designer & Developer',
+      timeline: 'In development',
+      focus: ['Game Design', 'Mobile', 'Currently Building'],
+    },
+    highlights: ['In active development'],
+    sections: [
+      {
+        heading: 'The game',
+        body: (
+          <>
+            Harvey is a turn-based tactical puzzle game set in a courtroom. You
+            play a defense attorney, and each case is a battle: the prosecution
+            fields witnesses, expert testimony, and exhibits of evidence, all
+            anchored by a prosecutor who wears down your Case Strength every
+            round. To win, you dismantle the entire case — discredit every
+            witness, neutralize every exhibit, and finally break the prosecutor
+            — before your own case collapses.
+          </>
+        ),
+      },
+      {
+        heading: 'How it plays',
+        body: (
+          <>
+            Every action spends Momentum — run out, and the prosecution takes
+            the floor. Your toolkit is pure courtroom theater: intimidate a
+            witness, reverse a hostile testimony so it damages their own side,
+            deliver an epic speech to restore your standing, or spend
+            everything on a tirade when the moment is right. The prosecution
+            fights back in kind, with experts who bolster their witnesses,
+            escalating threats that grow each round, and prosecutors whose
+            tactics change from case to case. Reading the board and sequencing
+            your arguments is the whole game.
+          </>
+        ),
+      },
+      {
+        heading: 'How it’s being built',
+        body: (
+          <>
+            Beyond the theme, Harvey is an experiment in designing gameplay
+            math you can actually verify: every case in the campaign is
+            simulated thousands of times to score its difficulty, so the
+            challenge curve is tuned with data instead of gut feel. The audio
+            is fully procedural — every sound effect and the lo-fi courtroom
+            jazz soundtrack are synthesized in code, with zero audio files
+            shipped. It’s in active development, so I’m keeping the details
+            (and the code) under wraps until it’s ready — this page is the
+            opening statement, not the full case.
+          </>
+        ),
+      },
+    ],
+  },
+
+  {
     slug: 'james-ai',
     title: 'James AI',
     shortTitle: 'James AI',
@@ -486,6 +551,7 @@ const sourceProjects = [
 // per-project prev/next navigation both follow it.
 const order = [
   'phonebelt',
+  'harvey',
   'misfit-munchies',
   'equity-research',
   'flight-delays',
