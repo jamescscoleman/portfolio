@@ -17,13 +17,18 @@ const ProjectCard = ({ project, index }) => (
       to={`/projects/${project.slug}`}
       className="group flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-colors duration-300 hover:border-accent/40"
     >
-      <div className="overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden rounded-lg">
         <img
           src={project.hero}
           alt={`${project.title}`}
           className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
+        {project.status && (
+          <span className="absolute left-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-ink shadow-lg">
+            {project.status}
+          </span>
+        )}
       </div>
       <h3 className="mt-5 font-display text-2xl font-semibold text-cream">{project.shortTitle}</h3>
       <p className="mt-2 flex-1 leading-relaxed text-muted">{project.summary}</p>

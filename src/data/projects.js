@@ -14,6 +14,7 @@
 //   summary     string   — card blurb on the home grid
 //   hero        string   — lead image (public/ path)
 //   featured    boolean  — surfaced in the home hero collage
+//   status      string   — optional badge on the project card (e.g. "Currently building")
 //   meta        object    { role, timeline, focus: [] }
 //   highlights  string[] — outcomes / recognition, shown as pills
 //   stages      string[] — build progression, shown as a stepper
@@ -128,6 +129,7 @@ const sourceProjects = [
     summary:
       'A tactical puzzle game I’m building: outwit the prosecution witness by witness, exhibit by exhibit, before your case falls apart. In active development.',
     hero: '/harvey.jpg',
+    status: 'Currently building',
     meta: {
       role: 'Designer & Developer',
       timeline: 'In development',
@@ -180,6 +182,13 @@ const sourceProjects = [
             opening statement, not the full case.
           </>
         ),
+      },
+    ],
+    gallery: [
+      {
+        src: '/harvey-ui.png',
+        caption:
+          'The battle board — the prosecution’s witnesses and evidence up top, your Action Points and moves below',
       },
     ],
   },
