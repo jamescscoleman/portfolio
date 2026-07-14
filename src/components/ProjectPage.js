@@ -215,7 +215,13 @@ const ProjectPage = () => {
       {gallery?.length ? (
         <section className="mx-auto max-w-5xl px-6 pb-16">
           <h2 className="mb-6 text-xs uppercase tracking-[0.2em] text-muted/70">Gallery</h2>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div
+            className={
+              gallery.length === 1
+                ? 'mx-auto max-w-sm'
+                : 'grid grid-cols-1 gap-5 sm:grid-cols-2'
+            }
+          >
             {gallery.map((shot) => (
               <figure key={shot.src} className="group">
                 <button
@@ -227,7 +233,9 @@ const ProjectPage = () => {
                     src={shot.video ? shot.poster : shot.src}
                     alt={shot.caption || ''}
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className={`w-full transition-transform duration-300 group-hover:scale-105 ${
+                      gallery.length === 1 ? '' : 'aspect-[4/3] object-cover'
+                    }`}
                   />
                   {shot.video && (
                     <span className="absolute inset-0 flex items-center justify-center">
@@ -238,7 +246,13 @@ const ProjectPage = () => {
                   )}
                 </button>
                 {shot.caption ? (
-                  <figcaption className="mt-2 text-sm text-muted">{shot.caption}</figcaption>
+                  <figcaption
+                    className={`mt-2 text-sm text-muted ${
+                      gallery.length === 1 ? 'text-center' : ''
+                    }`}
+                  >
+                    {shot.caption}
+                  </figcaption>
                 ) : null}
               </figure>
             ))}
