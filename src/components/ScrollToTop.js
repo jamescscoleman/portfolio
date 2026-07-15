@@ -1,7 +1,7 @@
 // src/components/ScrollToTop.js
 //
 // React Router doesn't reset scroll on navigation. This restores the natural
-// "new page starts at the top" behavior — and, when a link includes a hash
+// "new page starts at the top" behavior - and, when a link includes a hash
 // (e.g. /#projects), scrolls to that section instead.
 
 import { useEffect } from 'react';

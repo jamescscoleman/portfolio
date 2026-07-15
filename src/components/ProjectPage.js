@@ -1,7 +1,7 @@
 // src/components/ProjectPage.js
 //
 // The per-project case study. Every block is conditional, so a rich project
-// (PhoneBelt) and a one-paragraph project (James AI) both look intentional —
+// (PhoneBelt) and a one-paragraph project (James AI) both look intentional -
 // the page's density scales with the content it's given.
 
 import React, { useEffect, useState, Fragment } from 'react';
@@ -26,10 +26,10 @@ const ProjectPage = () => {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.shortTitle} — James Coleman`;
+      document.title = `${project.shortTitle} | James Coleman`;
     }
     return () => {
-      document.title = 'James Coleman — Portfolio';
+      document.title = 'James Coleman | Portfolio';
     };
   }, [project]);
 

@@ -3,24 +3,24 @@
 // Single source of truth for every project. Both the home grid and the
 // per-project case-study pages read from here.
 //
-// Shape (every field except slug/title/shortTitle/summary/hero is optional —
+// Shape (every field except slug/title/shortTitle/summary/hero is optional -
 // the ProjectPage template renders only what's present, so lighter projects
 // stay clean instead of looking empty):
 //
-//   slug        string   — URL segment, e.g. "phonebelt" -> /projects/phonebelt
-//   title       string   — full project title
-//   shortTitle  string   — compact title for cards/tiles
-//   tagline     string   — one-line hook shown under the title
-//   summary     string   — card blurb on the home grid
-//   hero        string   — lead image (public/ path)
-//   featured    boolean  — surfaced in the home hero collage
-//   status      string   — optional badge on the project card (e.g. "Currently building")
+//   slug        string   - URL segment, e.g. "phonebelt" -> /projects/phonebelt
+//   title       string   - full project title
+//   shortTitle  string   - compact title for cards/tiles
+//   tagline     string   - one-line hook shown under the title
+//   summary     string   - card blurb on the home grid
+//   hero        string   - lead image (public/ path)
+//   featured    boolean  - surfaced in the home hero collage
+//   status      string   - optional badge on the project card (e.g. "Currently building")
 //   meta        object    { role, timeline, focus: [] }
-//   highlights  string[] — outcomes / recognition, shown as pills
-//   stages      string[] — build progression, shown as a stepper
+//   highlights  string[] - outcomes / recognition, shown as pills
+//   stages      string[] - build progression, shown as a stepper
 //   sections    array     [{ heading?, body: <JSX> }]
 //   links       array     [{ label, href }]
-//   gallery     array     [{ src, caption }]  — to add more shots, drop files
+//   gallery     array     [{ src, caption }]  - to add more shots, drop files
 //                         in public/ and append entries here.
 
 const sourceProjects = [
@@ -29,9 +29,9 @@ const sourceProjects = [
     title: 'PhoneBelt LLC',
     shortTitle: 'PhoneBelt',
     tagline:
-      'A camera-free, privacy-first driver-safety system for commercial fleets — where one crash can cost orders of magnitude more than in a passenger vehicle.',
+      'A camera-free, privacy-first driver-safety system for commercial fleets, where one crash can cost orders of magnitude more than in a passenger vehicle.',
     summary:
-      'A privacy-first, sensor-based driver-safety system I founded for commercial fleets — solving with Bluetooth and accelerometers what competitors solve with the in-cab cameras drivers hate.',
+      'A privacy-first, sensor-based driver-safety system I founded for commercial fleets, solving with Bluetooth and accelerometers what competitors solve with the in-cab cameras drivers hate.',
     hero: '/PCB.jpg',
     featured: true,
     meta: {
@@ -57,7 +57,7 @@ const sourceProjects = [
             what keeps fleet operators up at night: among trucking verdicts over
             $1 million, the average award ballooned from $2.3 million in 2010 to
             $22.3 million in 2018 (ATRI). Commercial driving doesn't just see
-            more accidents — each one carries far higher, increasingly
+            more accidents; each one carries far higher, increasingly
             catastrophic stakes. That asymmetry is why fleets invest so heavily
             in driver safety, and why this is an enterprise problem, not a
             consumer one.
@@ -70,11 +70,11 @@ const sourceProjects = [
           <>
             The standard answer is the driver-facing camera. Systems like Samsara
             (NYSE: IOT) point a lens at the driver to monitor for phone use,
-            seat-belt compliance, and drowsiness. They work — but they're deeply
+            seat-belt compliance, and drowsiness. They work, but they're deeply
             unpopular with the people they're aimed at. Many commercial drivers
             spend their working lives in their cabs, and a camera in that space
             feels less like a safety device than surveillance. That resistance
-            isn't a footnote: it shapes retention and fuels union pushback — the
+            isn't a footnote: it shapes retention and fuels union pushback. The
             Teamsters have blocked UPS from installing driver-facing cameras. And
             the budget behind this category is real: fleets pay $40–60 per
             vehicle per month for safety telematics, and Samsara alone has built
@@ -88,7 +88,7 @@ const sourceProjects = [
         body: (
           <>
             PhoneBelt solves the same problem without a camera. Instead of
-            recording the driver, it reads signals — Bluetooth distance and angle
+            recording the driver, it reads signals: Bluetooth distance and angle
             to detect when a driver is handling their phone behind the wheel, and
             accelerometer data to evaluate driving behavior. No lens, no footage,
             no surveillance of the cab. Camera systems win the data but lose the
@@ -103,7 +103,7 @@ const sourceProjects = [
         body: (
           <>
             I founded PhoneBelt and led product from concept through
-            commercialization — proof of concept, MVP, prototype, and final
+            commercialization: proof of concept, MVP, prototype, and final
             product. Along the way I completed NSF I-Corps and Cornell's Rev
             Hardware Accelerator, and secured non-dilutive funding to support
             development.
@@ -112,11 +112,11 @@ const sourceProjects = [
       },
     ],
     gallery: [
-      { src: '/phonebelt-poc.jpg', caption: 'Proof of concept — sensor and microcontroller on a breadboard' },
+      { src: '/phonebelt-poc.jpg', caption: 'Proof of concept: sensor and microcontroller on a breadboard' },
       { src: '/phonebelt-pcb.jpg', caption: 'First custom PCB' },
       { src: '/phonebelt-mvp.jpg', caption: 'MVP installed in a test vehicle' },
       { src: '/phonebelt-prototype.jpg', caption: '3D-printed enclosure iterations' },
-      { src: '/phonebelt-app.jpg', caption: 'Live sensor data — Bluetooth distance and accelerometer readings' },
+      { src: '/phonebelt-app.jpg', caption: 'Live sensor data: Bluetooth distance and accelerometer readings' },
     ],
   },
 
@@ -125,7 +125,7 @@ const sourceProjects = [
     title: 'Harvey',
     shortTitle: 'Harvey',
     tagline:
-      'A turn-based tactical courtroom game where you play a defense attorney dismantling the prosecution’s case — currently in development.',
+      'A turn-based tactical courtroom game where you play a defense attorney dismantling the prosecution’s case. Currently in development.',
     summary:
       'A tactical puzzle game I’m building: outwit the prosecution witness by witness, exhibit by exhibit, before your case falls apart. In active development.',
     hero: '/harvey.jpg',
@@ -145,9 +145,9 @@ const sourceProjects = [
             play a defense attorney, and each case is a battle: the prosecution
             fields witnesses, expert testimony, and exhibits of evidence, all
             anchored by a prosecutor who wears down your Case Strength every
-            round. To win, you dismantle the entire case — discredit every
+            round. To win, you dismantle the entire case: discredit every
             witness, neutralize every exhibit, and finally break the prosecutor
-            — before your own case collapses.
+            before your own case collapses.
           </>
         ),
       },
@@ -155,7 +155,7 @@ const sourceProjects = [
         heading: 'How it plays',
         body: (
           <>
-            Every action spends Momentum — run out, and the prosecution takes
+            Every action spends Momentum; run out, and the prosecution takes
             the floor. Your toolkit is pure courtroom theater: intimidate a
             witness, reverse a hostile testimony so it damages their own side,
             deliver an epic speech to restore your standing, or spend
@@ -175,10 +175,10 @@ const sourceProjects = [
             math you can actually verify: every case in the campaign is
             simulated thousands of times to score its difficulty, so the
             challenge curve is tuned with data instead of gut feel. The audio
-            is fully procedural — every sound effect and the lo-fi courtroom
+            is fully procedural: every sound effect and the lo-fi courtroom
             jazz soundtrack are synthesized in code, with zero audio files
             shipped. It’s in active development, so I’m keeping the details
-            (and the code) under wraps until it’s ready — this page is the
+            (and the code) under wraps until it’s ready. This page is the
             opening statement, not the full case.
           </>
         ),
@@ -190,7 +190,7 @@ const sourceProjects = [
         video: true,
         poster: '/harvey-video-poster.jpg',
         caption:
-          'Real gameplay — dismantling the prosecution’s case, one witness at a time (27s, tap to play)',
+          'Real gameplay: dismantling the prosecution’s case, one witness at a time (27s, tap to play)',
       },
     ],
   },
@@ -200,9 +200,9 @@ const sourceProjects = [
     title: 'James AI',
     shortTitle: 'James AI',
     tagline:
-      'A digital twin of me — ask it anything about my work, my projects, or how I think.',
+      'A digital twin of me. Ask it anything about my work, my projects, or how I think.',
     summary:
-      'A digital twin of me — an AI assistant trained on my projects, writing, and experience, so you can ask it anything about my work and background.',
+      'A digital twin of me: an AI assistant trained on my projects, writing, and experience, so you can ask it anything about my work and background.',
     hero: '/JamesAI.png',
     featured: true,
     meta: {
@@ -251,7 +251,7 @@ const sourceProjects = [
         body: (
           <>
             Picture an imaginary driver named Michael. He's 16 and drives
-            incredibly safely — below the speed limit, always belted, never on
+            incredibly safely: below the speed limit, always belted, never on
             his phone. Insurers don't know that. They see a 16-year-old male,
             the riskiest driving demographic, and group him in as risky because
             there's little data to prove otherwise. Car-Ching tracks his driving
@@ -279,14 +279,14 @@ const sourceProjects = [
     ],
     links: [
       {
-        label: 'Figma — Car-Ching v2.3 Design',
+        label: 'Figma: Car-Ching v2.3 Design',
         href: 'https://www.figma.com/file/Car-Chingv23Design',
       },
       {
-        label: 'GitHub — Car-Ching',
+        label: 'GitHub: Car-Ching',
         href: 'https://github.com/jamescscoleman/Car-Ching-App',
       },
-      { label: 'Website — Car-Ching', href: 'https://www.car-ching.com' },
+      { label: 'Website: Car-Ching', href: 'https://www.car-ching.com' },
     ],
   },
 
@@ -313,7 +313,7 @@ const sourceProjects = [
             track records and which days are most prone to significant delays. A
             few findings stood out: to minimize delays, avoid flying on Mondays
             and Fridays. Among the airlines analyzed, JetBlue was the most
-            delay-prone — averaging 36 minutes late per flight — while Alaska
+            delay-prone, averaging 36 minutes late per flight, while Alaska
             Airlines tended to depart a few minutes ahead of schedule. It
             started as a way to get some closure on a bad travel day and turned
             into a small, data-driven guide for picking flights.
@@ -338,13 +338,13 @@ const sourceProjects = [
       timeline: '2024',
       focus: ['Sustainability', 'CPG'],
     },
-    highlights: ['Grand Prize — New Venture Fair (May 2024)'],
+    highlights: ['Grand Prize, New Venture Fair (May 2024)'],
     sections: [
       {
         body: (
           <>
             At Misfit Munchies, we work directly with farmers to turn surplus
-            and imperfect produce — often discarded just for how it looks — into
+            and imperfect produce, often discarded just for how it looks, into
             dog treats. A meaningful share of food waste comes from produce being
             slightly off in shape or size: crooked carrots, warped watermelons,
             misshapen mangoes that rarely make it to store shelves. Dogs don't
@@ -362,7 +362,7 @@ const sourceProjects = [
     slug: 'werkhaus',
     title: 'WerkHaus',
     shortTitle: 'WerkHaus',
-    tagline: 'The Uber for underused office space — connecting empty offices with people who need short-term workspace.',
+    tagline: 'The Uber for underused office space, connecting empty offices with people who need short-term workspace.',
     summary:
       'Built during Startup Weekend, WerkHaus won Best Business in 2022. It connects underused office space with people who need short-term workspace.',
     hero: '/WerkHaus.PNG',
@@ -372,7 +372,7 @@ const sourceProjects = [
       timeline: '2022',
       focus: ['Marketplace', 'Real Estate'],
     },
-    highlights: ['Best Business — Startup Weekend (2022)'],
+    highlights: ['Best Business, Startup Weekend (2022)'],
     sections: [
       {
         body: (
@@ -381,7 +381,7 @@ const sourceProjects = [
             It's essentially the Uber for underutilized office space, addressing
             the problem of vacant offices sitting in limbo between leases.
             WerkHaus bridges that gap by connecting empty spaces with people who
-            need short-term offices — making better use of commercial real
+            need short-term offices, making better use of commercial real
             estate while giving businesses a flexible way to find temporary
             space.
           </>
@@ -395,7 +395,7 @@ const sourceProjects = [
     title: 'Drinky: Innovating Social Gatherings',
     shortTitle: 'Drinky',
     tagline:
-      'A 3D-printed game with a mechanical twist — the CAD is the part I\'m proudest of.',
+      'A 3D-printed game with a mechanical twist. The CAD is the part I\'m proudest of.',
     summary:
       'At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games.',
     hero: '/DrinkyCAD.png',
@@ -431,7 +431,7 @@ const sourceProjects = [
       },
     ],
     links: [
-      { label: 'GitHub — DrinkyCAD', href: 'https://github.com/jamescscoleman/DrinkyCAD' },
+      { label: 'GitHub: DrinkyCAD', href: 'https://github.com/jamescscoleman/DrinkyCAD' },
     ],
   },
 
@@ -440,7 +440,7 @@ const sourceProjects = [
     title: 'Redesigned Food Container',
     shortTitle: 'Food Container',
     tagline:
-      'One versatile, stackable container with removable dividers — instead of a drawer full of mismatched ones.',
+      'One versatile, stackable container with removable dividers, instead of a drawer full of mismatched ones.',
     summary:
       'A versatile container with removable dividers for better food storage and organization, born out of meal-prep frustration.',
     hero: '/foodcontainer1.jpg',
@@ -457,14 +457,14 @@ const sourceProjects = [
             proportions, made me wonder why there isn't just one versatile
             container. My design is a single container that stacks efficiently,
             with removable dividers so you can adjust it to whatever you're
-            storing — instead of owning a drawer full of mismatched ones.
+            storing, instead of owning a drawer full of mismatched ones.
           </>
         ),
       },
     ],
     links: [
       {
-        label: 'CAD files — Old Project Archive',
+        label: 'CAD files: Old Project Archive',
         href: 'https://github.com/jamescscoleman/Old-Project-Archive',
       },
     ],
@@ -517,7 +517,7 @@ const sourceProjects = [
     title: 'Equity Research',
     shortTitle: 'Equity Research',
     tagline:
-      'A calculated bet during the 2020 dislocation — built on a thesis about institutional inertia.',
+      'A calculated bet during the 2020 dislocation, built on a thesis about institutional inertia.',
     summary:
       'A calculated bet during the 2020 market dislocation: a thesis around volatility and institutional inertia that returned roughly 1000% over five months.',
     hero: '/EquityResearch.JPG',
@@ -537,7 +537,7 @@ const sourceProjects = [
             extreme dislocation, large institutional funds lacked the agility to
             quickly shift their established strategies, creating mispriced
             opportunities for a nimble individual investor. I built positions
-            around that thesis using options and futures — calculated, but
+            around that thesis using options and futures: calculated, but
             admittedly risky.
           </>
         ),
@@ -548,7 +548,7 @@ const sourceProjects = [
             From January to May, the trades returned roughly 1000%, aggressive
             enough to (dis)honorably earn me a feature on the r/WallStreetBets
             subreddit. I'm not a stock guru, and I treat it as exactly what it
-            was — a specific thesis for a specific moment — but it remains a
+            was, a specific thesis for a specific moment, but it remains a
             useful reminder of what conviction plus timing can do.
           </>
         ),
@@ -557,7 +557,7 @@ const sourceProjects = [
   },
 ];
 
-// Canonical display + prev/next order — most representative work first.
+// Canonical display + prev/next order - most representative work first.
 // This is the single source of truth for ordering; the home grid and the
 // per-project prev/next navigation both follow it.
 const order = [

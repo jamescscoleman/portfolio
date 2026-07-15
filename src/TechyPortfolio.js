@@ -88,10 +88,10 @@ const TechyPortfolio = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-6">About Me</h2>
           <p className="text-lg text-cream/85 leading-relaxed mb-4">
-            I build products — specifically, the ones that don't exist yet. I took the scenic route here, and each stop set up the next. I started by founding a hardware startup: zero to one, from a blank page to a shipped physical product — and hardware is unforgiving, so it taught me that mistakes are expensive and you can't patch an object after it's out the door. Then I moved into mergers and acquisitions, where I learned to see what actually makes a business valuable — really, the question of what's worth building at all. From there I moved into software, where iteration is cheap and a good idea can reach people in days.
+            I build products, specifically the ones that don't exist yet. I took the scenic route here, and each stop set up the next. I started by founding a hardware startup: zero to one, from a blank page to a shipped physical product. Hardware is unforgiving, so it taught me that mistakes are expensive and you can't patch an object after it's out the door. Then I moved into mergers and acquisitions, where I learned to see what actually makes a business valuable, which is really the question of what's worth building at all. From there I moved into software, where iteration is cheap and a good idea can reach people in days.
           </p>
           <p className="text-lg text-cream/85 leading-relaxed mb-6">
-            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research — and it's zero to one all over again: less about polishing what exists, more about creating capabilities that weren't possible before. That's the part I find most exciting — taking what's newly possible and turning it into products an entire industry can use.
+            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research, and it's zero to one all over again: less about polishing what exists, more about creating capabilities that weren't possible before. That's the part I find most exciting: taking what's newly possible and turning it into products an entire industry can use.
           </p>
           <h3 className="text-2xl font-display font-semibold text-cream mb-3">Philosophies</h3>
           <ul className="list-disc list-inside text-lg text-muted space-y-1 marker:text-accent">
@@ -106,7 +106,7 @@ const TechyPortfolio = () => {
       <div className="w-full py-20 flex flex-col items-center justify-center" id="projects">
         <h2 className="text-3xl md:text-4xl font-display font-semibold text-cream mb-2">Projects</h2>
         <p className="text-muted mb-10 max-w-2xl text-center px-4 leading-relaxed">
-          A collection of things I've built alongside my career—startups, hardware, data, and a few odd experiments. Click any project to read the full story.
+          A collection of things I've built alongside my career: startups, hardware, data, and a few odd experiments. Click any project to read the full story.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
           {projects.map((project, index) => (
