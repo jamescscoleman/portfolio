@@ -31,7 +31,7 @@ const sourceProjects = [
     tagline:
       'A camera-free, privacy-first driver-safety system for commercial fleets, where one crash can cost orders of magnitude more than in a passenger vehicle.',
     summary:
-      'A privacy-first, sensor-based driver-safety system I founded for commercial fleets, solving with Bluetooth and accelerometers what competitors solve with the in-cab cameras drivers hate.',
+      'A sensor-based driver-safety system I founded for commercial fleets, solving with Bluetooth and accelerometers what competitors solve with the in-cab cameras drivers hate.',
     hero: '/PCB.jpg',
     featured: true,
     meta: {
@@ -52,7 +52,7 @@ const sourceProjects = [
           <>
             The economics of a crash change completely behind the wheel of an
             80,000-pound truck. A typical at-fault passenger claim runs around
-            $20–30K in liability; an average large-truck crash costs roughly
+            $20 to $30K in liability; an average large-truck crash costs roughly
             $91,000, and a fatal one about $3.6 million (FMCSA). The tail risk is
             what keeps fleet operators up at night: among trucking verdicts over
             $1 million, the average award ballooned from $2.3 million in 2010 to
@@ -76,7 +76,7 @@ const sourceProjects = [
             feels less like a safety device than surveillance. That resistance
             isn't a footnote: it shapes retention and fuels union pushback. The
             Teamsters have blocked UPS from installing driver-facing cameras. And
-            the budget behind this category is real: fleets pay $40–60 per
+            the budget behind this category is real: fleets pay $40 to $60 per
             vehicle per month for safety telematics, and Samsara alone has built
             a roughly $1.5-billion-a-year business on it. The demand is real;
             driver satisfaction with the incumbent product isn't.
@@ -90,8 +90,8 @@ const sourceProjects = [
             PhoneBelt solves the same problem without a camera. Instead of
             recording the driver, it reads signals: Bluetooth distance and angle
             to detect when a driver is handling their phone behind the wheel, and
-            accelerometer data to evaluate driving behavior. No lens, no footage,
-            no surveillance of the cab. Camera systems win the data but lose the
+            accelerometer data to evaluate driving behavior. There's no lens in
+            the cab and no footage of the driver. Camera systems win the data but lose the
             driver; PhoneBelt's privacy-first design captures the safety signal
             fleets need while earning the buy-in that decides whether a safety
             program actually works in the field.
@@ -378,12 +378,11 @@ const sourceProjects = [
         body: (
           <>
             WerkHaus, built during Startup Weekend, won Best Business in 2022.
-            It's essentially the Uber for underutilized office space, addressing
-            the problem of vacant offices sitting in limbo between leases.
-            WerkHaus bridges that gap by connecting empty spaces with people who
-            need short-term offices, making better use of commercial real
-            estate while giving businesses a flexible way to find temporary
-            space.
+            It's essentially the Uber for underutilized office space: vacant
+            offices sit in limbo between leases, and WerkHaus connects those
+            empty spaces with people who need short-term offices. Owners get
+            more use out of their real estate, and businesses get a flexible
+            way to find temporary space.
           </>
         ),
       },
@@ -524,7 +523,7 @@ const sourceProjects = [
     featured: true,
     meta: {
       role: 'Individual Investor',
-      timeline: 'Jan – May 2020',
+      timeline: 'Jan to May 2020',
       focus: ['Finance', 'Options', 'Thesis-driven'],
     },
     highlights: ['~1000% return over five months', 'Featured on r/WallStreetBets'],
