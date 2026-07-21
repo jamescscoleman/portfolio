@@ -74,17 +74,32 @@ const sourceProjects = [
             FedEx Ground has required a dual-facing camera in every contractor
             truck since 2017, and Amazon's AI camera system records drivers and
             ties the footage to their weekly pay scores. The people in the cab
-            have fought back just as hard. Amazon drivers quit over the cameras,
-            Lytx paid over $4 million to settle a biometric-privacy lawsuit in
-            Illinois, and in 2023 the Teamsters made "Wages Up, Cameras Off" a
-            headline demand and won a contract ban on driver-facing cameras
-            across UPS's entire fleet. Many commercial drivers spend their
+            have fought back just as hard: Amazon drivers quit over the cameras,
+            and Lytx paid over $4 million to settle a biometric-privacy lawsuit
+            in Illinois. Many commercial drivers spend their
             working lives in their cabs, and a camera in that space reads as
             surveillance, not safety. Yet the budget behind this category is
             real: fleets pay $40 to $60 per vehicle per month for safety
             telematics, and Samsara alone has built a roughly
             $1.5-billion-a-year business on it. The demand is real; driver
             satisfaction with the incumbent product isn't.
+          </>
+        ),
+      },
+      {
+        heading: 'What the UPS fight proved',
+        body: (
+          <>
+            In 2023, 340,000 UPS Teamsters came within days of the largest
+            single-employer strike in American history. Pay made the headlines,
+            but in-cab surveillance was on the marquee too: "Wages Up, Cameras
+            Off" was an official campaign slogan. UPS conceded. The contract
+            that members ratified by 86% bans driver-facing cameras across the
+            entire fleet and bars the company from disciplining drivers on
+            telematics data alone. The industry's largest fleet agreed, in
+            writing, that the leading safety technology is unacceptable to the
+            people it watches. A safety system drivers will actually accept
+            isn't a nice-to-have; at UPS scale, it's now a contract term.
           </>
         ),
       },
