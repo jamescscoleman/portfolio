@@ -182,12 +182,16 @@ const sourceProjects = [
             challenge curve is tuned with data instead of gut feel. The audio
             is fully procedural: every sound effect and the lo-fi courtroom
             jazz soundtrack are synthesized in code, with zero audio files
-            shipped. It’s in active development, so I’m keeping the details
-            (and the code) under wraps until it’s ready. This page is the
-            opening statement, not the full case.
+            shipped. It’s in active development, so the code stays under wraps
+            until it’s ready, but you can play the current build in your
+            browser below. This page is the opening statement, not the full
+            case.
           </>
         ),
       },
+    ],
+    links: [
+      { label: 'Play the demo in your browser', href: 'https://play-harvey.netlify.app' },
     ],
     gallery: [
       {
