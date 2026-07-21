@@ -69,17 +69,22 @@ const sourceProjects = [
         body: (
           <>
             The standard answer is the driver-facing camera. Systems like Samsara
-            (NYSE: IOT) point a lens at the driver to monitor for phone use,
-            seat-belt compliance, and drowsiness. They work, but they're deeply
-            unpopular with the people they're aimed at. Many commercial drivers
-            spend their working lives in their cabs, and a camera in that space
-            feels less like a safety device than surveillance. That resistance
-            isn't a footnote: it shapes retention and fuels union pushback. The
-            Teamsters have blocked UPS from installing driver-facing cameras. And
-            the budget behind this category is real: fleets pay $40 to $60 per
-            vehicle per month for safety telematics, and Samsara alone has built
-            a roughly $1.5-billion-a-year business on it. The demand is real;
-            driver satisfaction with the incumbent product isn't.
+            (NYSE: IOT) and Lytx point a lens at the driver to monitor for phone
+            use, seat-belt compliance, and drowsiness. Adoption is top-down:
+            FedEx Ground has required a dual-facing camera in every contractor
+            truck since 2017, and Amazon's AI camera system records drivers and
+            ties the footage to their weekly pay scores. The people in the cab
+            have fought back just as hard. Amazon drivers quit over the cameras,
+            Lytx paid over $4 million to settle a biometric-privacy lawsuit in
+            Illinois, and in 2023 the Teamsters made "Wages Up, Cameras Off" a
+            headline demand and won a contract ban on driver-facing cameras
+            across UPS's entire fleet. Many commercial drivers spend their
+            working lives in their cabs, and a camera in that space reads as
+            surveillance, not safety. Yet the budget behind this category is
+            real: fleets pay $40 to $60 per vehicle per month for safety
+            telematics, and Samsara alone has built a roughly
+            $1.5-billion-a-year business on it. The demand is real; driver
+            satisfaction with the incumbent product isn't.
           </>
         ),
       },

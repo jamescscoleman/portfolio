@@ -68,6 +68,13 @@ Approach: **don't** compare commercial vs. personal driving by vehicle count (pe
 
 - **Incumbent = driver-facing cameras** (Samsara, Lytx, Motive). Continuously/ event-triggered monitoring for phone use, seat-belt compliance, drowsiness. They work, but they're among the most *resented* tools in the industry.
 - **Why drivers hate them:** many commercial drivers effectively live in their cabs; an in-cab lens reads as surveillance. Drives retention problems and union pushback — e.g., the Teamsters have blocked UPS from installing driver-facing cameras.
+
+### 3a. The camera-resistance evidence (verified 2026-07)
+- **UPS / Teamsters (2023):** the National Master Agreement bans inward-facing cameras in UPS vehicles and bars using telematics data alone to discipline drivers. "Wages UP, Cameras OFF!" was an official campaign slogan. ⚠️ Caveat: the contract still permits driver-facing *sensors* for in-cab audible distraction alerts (a lens-vs-"sensor" wording loophole critics flagged). [Teamsters, contract PDF, FreightWaves]
+- **FedEx Ground (2017– ):** required Lytx DriveCam (dual-facing, records in-cab audio) in every contractor truck by Aug 1, 2017 — no camera, no dispatch. Footage feeds a cloud portal; drivers are scored and can face discipline. [TruckersReport, MarketingScoop]
+- **Amazon (2021– ):** Netradyne "Driveri" four-camera system (one driver-facing); biometric consent required; AI "events" feed weekly scores tied to bonuses/pay. Documented driver resignations over privacy; drivers dinged for mirror checks/being cut off; U.S. senators (Markey et al.) sent an oversight letter; Fight for the Future called it "the largest expansion of corporate surveillance in history." [Vice, CBS News, Markey letter]
+- **Lytx BIPA settlement:** $4M+ settlement of an Illinois biometric-privacy class action over DriveCam face-geometry scanning. [FreightWaves]
+- **Framing note:** companies *adopt* cameras top-down (FedEx, Amazon); *drivers/unions* fight them, and where labor has leverage (UPS) the camera got banned outright. PhoneBelt's wedge: deliver the safety signal without entering that fight.
 - **PhoneBelt's approach:** no camera. **Bluetooth distance + angle** to detect a phone-in-hand behind the wheel; **accelerometer** data to evaluate driving behavior/safety. No lens, no footage.
 - **Adoption thesis (the keeper line):** *camera systems win the data but lose the driver; privacy-first design earns the buy-in that decides whether a safety program actually works in the field.*
 
