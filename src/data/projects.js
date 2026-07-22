@@ -313,7 +313,7 @@ const sourceProjects = [
       'Turning surplus and imperfect produce into affordable, nutritious dog treats.',
     summary:
       "Misfit Munchies turns surplus and imperfect produce into dog treats. The team won Best MVP and Best Team at Cal Lutheran's 2024 New Venture Fair, then two more awards at the 2025 fair. It lives on today as UpPup Treats.",
-    hero: '/NewVentureFair.jpg',
+    hero: '/MisfitMunchiesTeam.jpg',
     meta: {
       role: 'Team member',
       timeline: '2024 to 2025',
@@ -352,6 +352,13 @@ const sourceProjects = [
             lucky to be part of the early chapter.
           </>
         ),
+      },
+    ],
+    gallery: [
+      {
+        src: '/NewVentureFair.jpg',
+        caption:
+          'The 2024 New Venture Fair haul: Best MVP, MBA 591 First Place, and Best Team',
       },
     ],
     links: [
