@@ -312,7 +312,7 @@ const sourceProjects = [
     tagline:
       'Turning surplus and imperfect produce into affordable, nutritious dog treats.',
     summary:
-      "Misfit Munchies turns surplus and imperfect produce into dog treats. The team won Best MVP and Best Team at Cal Lutheran's 2024 New Venture Fair, then two more awards at the 2025 fair.",
+      "Misfit Munchies turns surplus and imperfect produce into dog treats. The team won Best MVP and Best Team at Cal Lutheran's 2024 New Venture Fair, then two more awards at the 2025 fair. It lives on today as UpPup Treats.",
     hero: '/NewVentureFair.jpg',
     meta: {
       role: 'Team member',
@@ -342,22 +342,30 @@ const sourceProjects = [
       {
         body: (
           <>
-            The credit here belongs to my teammates. Every award in that photo
-            was earned by the whole table, and the sharpest thinking on the
-            product and the pitch came from the people standing next to me. I
-            was lucky to be part of it.
+            The credit here belongs to my teammates. Every award was earned by
+            the whole table, and the sharpest thinking on the product and the
+            pitch came from the people I built it with. The proof is what they
+            did next: Rosie Baker and Princesa Martinez kept going after the
+            fair, rebranded as UpPup Treats when another company turned out to
+            own the Misfit Munchies name, earned two Dorfman Incubator Grants
+            from Cal Lutheran, and launched their online store in 2026. I was
+            lucky to be part of the early chapter.
           </>
         ),
       },
     ],
     links: [
       {
-        label: "Cal Lutheran's New Venture Fair winners",
-        href: 'https://www.callutheran.edu/centers/entrepreneurship/programs/new-venture-winners.html',
+        label: 'UpPup Treats (formerly Misfit Munchies)',
+        href: 'https://www.uppuptreats.com/',
       },
       {
-        label: 'Instagram: @misfitmunchiestreats',
-        href: 'https://www.instagram.com/misfitmunchiestreats/',
+        label: "Cal Lutheran News: 'Dogged entrepreneurs'",
+        href: 'https://news.callutheran.edu/2026/03/dogged-entrepreneurs/',
+      },
+      {
+        label: "Cal Lutheran's New Venture Fair winners",
+        href: 'https://www.callutheran.edu/centers/entrepreneurship/programs/new-venture-winners.html',
       },
     ],
   },

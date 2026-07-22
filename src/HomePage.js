@@ -134,21 +134,6 @@ const HomePage = () => {
           <p className="mb-6 text-lg leading-relaxed text-cream/85">
             AI turned days into an afternoon. Now I lead the Innovation product team at PureSpectrum, building AI-driven products for market research. It's zero to one all over again. Happily, the kind you can patch.
           </p>
-          <h3 className="mb-3 font-display text-2xl font-semibold text-cream">Philosophies</h3>
-          <ul className="list-disc list-inside space-y-1 text-lg text-muted marker:text-accent">
-            <li>
-              The hardest product problems are people problems. PhoneBelt exists
-              because drivers hate being watched, not because cameras miss data.
-            </li>
-            <li>
-              Treat ideas as hypotheses and keep the tests cheap. A weekend
-              build that flops teaches more than a quarter of planning.
-            </li>
-            <li>
-              When you can measure, don't guess. Harvey's difficulty curve is
-              tuned by simulation, not gut feel.
-            </li>
-          </ul>
         </div>
       </div>
 
