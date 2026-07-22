@@ -134,7 +134,9 @@ const sourceProjects = [
       { src: '/phonebelt-pcb.jpg', caption: 'First custom PCB' },
       { src: '/phonebelt-mvp.jpg', caption: 'MVP installed in a test vehicle' },
       { src: '/phonebelt-prototype.jpg', caption: '3D-printed enclosure iterations' },
+      { src: '/phonebelt-mockup.jpg', caption: 'Looks-like render: the production mount in a cab' },
       { src: '/phonebelt-app.jpg', caption: 'Live sensor data: Bluetooth distance and accelerometer readings' },
+      { src: '/phonebelt-booth.jpg', caption: 'Pitching the device on the expo floor' },
     ],
   },
 
@@ -439,9 +441,8 @@ const sourceProjects = [
         body: (
           <>
             Printed with PLA, the final product was coated with high-quality
-            paint and food-safe epoxy resin for a safe playing experience. For
-            anyone interested in the technical details or looking to build their
-            own, the Fusion 360 design files and documentation are on GitHub.
+            paint and food-safe epoxy resin for a safe playing experience. The
+            Fusion 360 design files and documentation are on GitHub.
           </>
         ),
       },
@@ -531,6 +532,10 @@ const sourceProjects = [
     gallery: [
       { src: '/BestDayUSA.PNG', caption: 'The storefront' },
       { src: '/ShirtDesign.jpg', caption: 'One of the shirt designs' },
+      {
+        src: '/CallSignGoose.jpg',
+        caption: "'Call Sign Goose', designed in Canva",
+      },
     ],
   },
 
