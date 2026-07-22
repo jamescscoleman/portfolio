@@ -1,11 +1,11 @@
 // src/components/ProjectPage.js
 //
 // The per-project case study. Every block is conditional, so a rich project
-// (PhoneBelt) and a one-paragraph project (James AI) both look intentional -
+// (PhoneBelt) and a one-paragraph project (WerkHaus) both look intentional -
 // the page's density scales with the content it's given.
 
-import React, { useEffect, useState, Fragment } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import React, { useEffect, useRef, useState, Fragment } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Play, X } from 'lucide-react';
 import {
@@ -13,6 +13,7 @@ import {
   getProject,
   getProjectIndex,
 } from '../data/projects';
+import NotFound from './NotFound';
 
 const fadeUp = {
   initial: { opacity: 0, y: 18 },
@@ -23,13 +24,15 @@ const ProjectPage = () => {
   const { slug } = useParams();
   const project = getProject(slug);
   const [lightbox, setLightbox] = useState(null);
+  const closeButtonRef = useRef(null);
+  const lastFocusedRef = useRef(null);
 
   useEffect(() => {
     if (project) {
       document.title = `${project.shortTitle} | James Coleman`;
     }
     return () => {
-      document.title = 'James Coleman | Portfolio';
+      document.title = 'James Coleman — Product Leader';
     };
   }, [project]);
 
@@ -41,7 +44,17 @@ const ProjectPage = () => {
     return () => window.removeEventListener('keydown', onKey);
   }, [lightbox]);
 
-  if (!project) return <Navigate to="/" replace />;
+  // Move focus into the lightbox when it opens; put it back when it closes.
+  useEffect(() => {
+    if (lightbox) {
+      lastFocusedRef.current = document.activeElement;
+      closeButtonRef.current?.focus();
+    } else {
+      lastFocusedRef.current?.focus?.();
+    }
+  }, [lightbox]);
+
+  if (!project) return <NotFound />;
 
   const idx = getProjectIndex(slug);
   const prev = projects[(idx - 1 + projects.length) % projects.length];
@@ -106,13 +119,13 @@ const ProjectPage = () => {
           >
             {meta.role && (
               <div>
-                <span className="block text-xs uppercase tracking-wider text-muted/70">Role</span>
+                <span className="block text-xs uppercase tracking-wider text-muted">Role</span>
                 <span className="mt-1 block text-cream">{meta.role}</span>
               </div>
             )}
             {meta.timeline && (
               <div>
-                <span className="block text-xs uppercase tracking-wider text-muted/70">Timeline</span>
+                <span className="block text-xs uppercase tracking-wider text-muted">Timeline</span>
                 <span className="mt-1 block text-cream">{meta.timeline}</span>
               </div>
             )}
@@ -156,7 +169,7 @@ const ProjectPage = () => {
         {/* Build progression */}
         {stages?.length ? (
           <div className="mb-12">
-            <h2 className="mb-4 text-xs uppercase tracking-[0.2em] text-muted/70">Build progression</h2>
+            <h2 className="mb-4 text-xs uppercase tracking-[0.2em] text-muted">Build progression</h2>
             <div className="flex flex-wrap items-center gap-2">
               {stages.map((s, i) => (
                 <Fragment key={s}>
@@ -164,7 +177,7 @@ const ProjectPage = () => {
                     {s}
                   </span>
                   {i < stages.length - 1 && (
-                    <ArrowRight size={15} className="text-muted/60" />
+                    <ArrowRight size={15} className="text-muted" />
                   )}
                 </Fragment>
               ))}
@@ -188,7 +201,7 @@ const ProjectPage = () => {
         {/* Links */}
         {links?.length ? (
           <div className="mt-12 border-t border-hairline pt-8">
-            <h2 className="mb-4 text-xs uppercase tracking-[0.2em] text-muted/70">Links</h2>
+            <h2 className="mb-4 text-xs uppercase tracking-[0.2em] text-muted">Links</h2>
             <ul className="space-y-2">
               {links.map((link) => (
                 <li key={link.href}>
@@ -214,7 +227,7 @@ const ProjectPage = () => {
       {/* Gallery */}
       {gallery?.length ? (
         <section className="mx-auto max-w-5xl px-6 pb-16">
-          <h2 className="mb-6 text-xs uppercase tracking-[0.2em] text-muted/70">Gallery</h2>
+          <h2 className="mb-6 text-xs uppercase tracking-[0.2em] text-muted">Gallery</h2>
           <div
             className={
               gallery.length === 1
@@ -296,10 +309,14 @@ const ProjectPage = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setLightbox(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={lightbox.caption || 'Media viewer'}
             className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95 p-6 backdrop-blur"
           >
             <button
               type="button"
+              ref={closeButtonRef}
               aria-label="Close"
               className="absolute right-5 top-5 text-muted transition-colors hover:text-cream"
               onClick={() => setLightbox(null)}

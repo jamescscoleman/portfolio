@@ -1,19 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import TechyPortfolio from './TechyPortfolio';
+import { MotionConfig } from 'framer-motion';
+import HomePage from './HomePage';
 import ProjectPage from './components/ProjectPage';
+import NotFound from './components/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<TechyPortfolio />} />
-        <Route path="/projects/:slug" element={<ProjectPage />} />
-        {/* Unknown paths fall back to the home page */}
-        <Route path="*" element={<TechyPortfolio />} />
-      </Routes>
-    </BrowserRouter>
+    <MotionConfig reducedMotion="user">
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </MotionConfig>
   );
 }
 

@@ -13,7 +13,6 @@
 //   tagline     string   - one-line hook shown under the title
 //   summary     string   - card blurb on the home grid
 //   hero        string   - lead image (public/ path)
-//   featured    boolean  - surfaced in the home hero collage
 //   status      string   - optional badge on the project card (e.g. "Currently building")
 //   meta        object    { role, timeline, focus: [] }
 //   highlights  string[] - outcomes / recognition, shown as pills
@@ -29,11 +28,10 @@ const sourceProjects = [
     title: 'PhoneBelt LLC',
     shortTitle: 'PhoneBelt',
     tagline:
-      'A camera-free, privacy-first driver-safety system for commercial fleets, where one crash can cost orders of magnitude more than in a passenger vehicle.',
+      'Driver safety for commercial fleets, without the camera drivers hate.',
     summary:
       'A sensor-based driver-safety system I founded for commercial fleets, solving with Bluetooth and accelerometers what competitors solve with the in-cab cameras drivers hate.',
     hero: '/PCB.jpg',
-    featured: true,
     meta: {
       role: 'Founder & Product Lead',
       timeline: 'Concept → Commercialization',
@@ -145,17 +143,16 @@ const sourceProjects = [
     title: 'Harvey',
     shortTitle: 'Harvey',
     tagline:
-      'A turn-based tactical courtroom game where you play a defense attorney dismantling the prosecution’s case. Currently in development.',
+      'A turn-based tactical courtroom game where you play a defense attorney dismantling the prosecution’s case.',
     summary:
-      'A tactical puzzle game I’m building: outwit the prosecution witness by witness, exhibit by exhibit, before your case falls apart. In active development.',
+      'A tactical puzzle game I’m building: outwit the prosecution witness by witness, exhibit by exhibit, before your case falls apart.',
     hero: '/harvey.jpg',
     status: 'Currently building',
     meta: {
       role: 'Designer & Developer',
       timeline: 'In development',
-      focus: ['Game Design', 'Mobile', 'Currently Building'],
+      focus: ['Game Design', 'Mobile', 'Procedural Audio'],
     },
-    highlights: ['In active development'],
     sections: [
       {
         heading: 'The game',
@@ -220,33 +217,6 @@ const sourceProjects = [
   },
 
   {
-    slug: 'james-ai',
-    title: 'James AI',
-    shortTitle: 'James AI',
-    tagline:
-      'A digital twin of me. Ask it anything about my work, my projects, or how I think.',
-    summary:
-      'A digital twin of me: an AI assistant trained on my projects, writing, and experience, so you can ask it anything about my work and background.',
-    hero: '/JamesAI.png',
-    featured: true,
-    meta: {
-      role: 'Builder',
-      focus: ['AI', 'GPT-4', 'Personal'],
-    },
-    sections: [
-      {
-        body: (
-          <>
-            James AI is my digital twin: a GPT-4 assistant trained on my
-            portfolio, resume, and writing. Ask it about my projects, how I
-            approach a problem, or my background, and it answers as me.
-          </>
-        ),
-      },
-    ],
-  },
-
-  {
     slug: 'car-ching',
     title: 'Car-Ching App',
     shortTitle: 'Car-Ching',
@@ -255,7 +225,6 @@ const sourceProjects = [
     summary:
       'An insurtech mobile app I built to help insurance companies offer Usage-Based Insurance (UBI) policies.',
     hero: '/Car-Ching.png',
-    featured: true,
     meta: {
       role: 'Builder & Product',
       focus: ['Insurtech', 'Mobile', 'Data'],
@@ -282,35 +251,17 @@ const sourceProjects = [
             using the sensors already built into his smartphone and helps
             insurers price a rate based on his specific behavior. It runs in the
             background, and while setup is a small headache at first, the value
-            of that data could be the difference between paying $500 and $3,000.
+            of that data could be the difference between paying $500 and $3,000
+            a year.
           </>
-        ),
-      },
-      {
-        heading: 'The trends behind it',
-        body: (
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Insurance rates are increasingly based on data</li>
-            <li>The emergence of unstructured databases</li>
-            <li>The movement toward AI-based and personalized insurance rates</li>
-            <li>
-              The hypersonic growth of this same technology in the commercial
-              driving space
-            </li>
-          </ol>
         ),
       },
     ],
     links: [
       {
-        label: 'Figma: Car-Ching v2.3 Design',
-        href: 'https://www.figma.com/file/Car-Chingv23Design',
-      },
-      {
         label: 'GitHub: Car-Ching',
         href: 'https://github.com/jamescscoleman/Car-Ching-App',
       },
-      { label: 'Website: Car-Ching', href: 'https://www.car-ching.com' },
     ],
   },
 
@@ -333,16 +284,23 @@ const sourceProjects = [
           <>
             After a prolonged 6-hour delay with Spirit Airlines, I was motivated
             to dig into how different airlines actually perform on delays. Using
-            R, I ran a thorough analysis to find which airlines have the best
-            track records and which days are most prone to significant delays. A
-            few findings stood out: to minimize delays, avoid flying on Mondays
-            and Fridays. Among the airlines analyzed, JetBlue was the most
-            delay-prone, averaging 36 minutes late per flight, while Alaska
-            Airlines tended to depart a few minutes ahead of schedule. It
-            started as a way to get some closure on a bad travel day and turned
-            into a small, data-driven guide for picking flights.
+            R and two months of 2018 DOT on-time data (January and August), I
+            looked at which airlines have the best track records and which days
+            are most prone to significant delays. A few findings stood out: to
+            minimize delays, avoid flying on Mondays and Fridays. Among the
+            airlines analyzed, JetBlue was the most delay-prone, averaging 36
+            minutes late per flight, while Alaska Airlines tended to depart a
+            few minutes ahead of schedule. It started as a way to get some
+            closure on a bad travel day and turned into a small, data-driven
+            guide for picking flights.
           </>
         ),
+      },
+    ],
+    links: [
+      {
+        label: 'GitHub: analysis code and data',
+        href: 'https://github.com/jamescscoleman/Flight-Delay-Prediction-Model',
       },
     ],
   },
@@ -354,24 +312,23 @@ const sourceProjects = [
     tagline:
       'Turning surplus and imperfect produce into affordable, nutritious dog treats.',
     summary:
-      'Misfit Munchies turns surplus and imperfect produce into dog treats. In May 2024, the team won the grand prize at the New Venture Fair.',
+      'Misfit Munchies turns surplus and imperfect produce into dog treats. At the May 2024 New Venture Fair, the team took home Best MVP and Best Team.',
     hero: '/NewVentureFair.jpg',
-    featured: true,
     meta: {
       role: 'Team',
       timeline: '2024',
       focus: ['Sustainability', 'CPG'],
     },
-    highlights: ['Grand Prize, New Venture Fair (May 2024)'],
+    highlights: ['Best MVP, New Venture Fair (May 2024)', 'Best Team'],
     sections: [
       {
         body: (
           <>
             At Misfit Munchies, we work directly with farmers to turn surplus
             and imperfect produce, often discarded just for how it looks, into
-            dog treats. A meaningful share of food waste comes from produce being
-            slightly off in shape or size: crooked carrots, warped watermelons,
-            misshapen mangoes that rarely make it to store shelves. Dogs don't
+            dog treats. Plenty of good produce never reaches a shelf because
+            it's slightly off in shape or size: crooked carrots, warped
+            watermelons, misshapen mangoes. Dogs don't
             care what their food looks like, so we source this rejected produce
             from farmers and grocery stores and make affordable, nutritious
             treats from it. It's a practical use for food that would otherwise go
@@ -386,13 +343,12 @@ const sourceProjects = [
     slug: 'werkhaus',
     title: 'WerkHaus',
     shortTitle: 'WerkHaus',
-    tagline: 'The Uber for underused office space, connecting empty offices with people who need short-term workspace.',
+    tagline: 'Short-term workspace in offices sitting empty between leases.',
     summary:
-      'Built during Startup Weekend, WerkHaus won Best Business in 2022. It connects underused office space with people who need short-term workspace.',
+      'A marketplace concept built in one Startup Weekend: match vacant offices with people who need short-term workspace. Won Best Business, 2022.',
     hero: '/WerkHaus.PNG',
-    featured: false,
     meta: {
-      role: 'Co-founder',
+      role: 'Startup Weekend team',
       timeline: '2022',
       focus: ['Marketplace', 'Real Estate'],
     },
@@ -401,12 +357,12 @@ const sourceProjects = [
       {
         body: (
           <>
-            WerkHaus, built during Startup Weekend, won Best Business in 2022.
-            It's essentially the Uber for underutilized office space: vacant
-            offices sit in limbo between leases, and WerkHaus connects those
-            empty spaces with people who need short-term offices. Owners get
-            more use out of their real estate, and businesses get a flexible
-            way to find temporary space.
+            Offices sit vacant between leases, earning nothing, while plenty of
+            people need a workspace for a month, not a multi-year term. Over one
+            Startup Weekend we built and pitched WerkHaus to bridge that gap:
+            owners squeeze revenue out of idle real estate, and renters get
+            space without a lease. The judges named it Best Business at the end
+            of the weekend.
           </>
         ),
       },
@@ -421,8 +377,7 @@ const sourceProjects = [
       'A 3D-printed game with a mechanical twist. The CAD is the part I\'m proudest of.',
     summary:
       'At a Global Game Jam, I created Drinky, a 3D-printed game that adds a new twist to traditional drinking games.',
-    hero: '/DrinkyCAD.png',
-    featured: true,
+    hero: '/drinky-printed.jpg',
     meta: {
       role: 'Designer & Maker',
       timeline: 'Global Game Jam',
@@ -455,6 +410,12 @@ const sourceProjects = [
     ],
     links: [
       { label: 'GitHub: DrinkyCAD', href: 'https://github.com/jamescscoleman/DrinkyCAD' },
+    ],
+    gallery: [
+      {
+        src: '/DrinkyCAD.png',
+        caption: 'The Fusion 360 design: cantilever lid and uneven-lever gear',
+      },
     ],
   },
 
@@ -531,26 +492,24 @@ const sourceProjects = [
     ],
     gallery: [
       { src: '/BestDayUSA.PNG', caption: 'The storefront' },
-      { src: '/ShirtDesign.png', caption: 'One of the shirt designs' },
+      { src: '/ShirtDesign.jpg', caption: 'One of the shirt designs' },
     ],
   },
 
   {
     slug: 'equity-research',
-    title: 'Equity Research',
-    shortTitle: 'Equity Research',
+    title: 'A 2020 Options Bet',
+    shortTitle: '2020 Options Bet',
     tagline:
       'A calculated bet during the 2020 dislocation, built on a thesis about institutional inertia.',
     summary:
       'A calculated bet during the 2020 market dislocation: a thesis around volatility and institutional inertia that returned roughly 1000% over five months.',
     hero: '/EquityResearch.JPG',
-    featured: true,
     meta: {
       role: 'Individual Investor',
       timeline: 'Jan to May 2020',
       focus: ['Finance', 'Options', 'Thesis-driven'],
     },
-    highlights: ['~1000% return over five months', 'Featured on r/WallStreetBets'],
     sections: [
       {
         body: (
@@ -570,9 +529,10 @@ const sourceProjects = [
           <>
             From January to May, the trades returned roughly 1000%, aggressive
             enough to (dis)honorably earn me a feature on the r/WallStreetBets
-            subreddit. I'm not a stock guru, and I treat it as exactly what it
-            was, a specific thesis for a specific moment, but it remains a
-            useful reminder of what conviction plus timing can do.
+            subreddit. The screenshot above is one week of it: up 93% in the
+            last week of February. I'm not a stock guru, and I treat it as
+            exactly what it was, a specific thesis for a specific moment, but it
+            remains a useful reminder of what conviction plus timing can do.
           </>
         ),
       },
@@ -582,33 +542,35 @@ const sourceProjects = [
 
 // Canonical display + prev/next order - most representative work first.
 // This is the single source of truth for ordering; the home grid and the
-// per-project prev/next navigation both follow it.
-const order = [
-  'phonebelt',
-  'harvey',
-  'misfit-munchies',
+// per-project prev/next navigation both follow it. The home grid renders in
+// two tiers so the flagship work isn't diluted by the smaller experiments.
+const selectedOrder = ['phonebelt', 'harvey', 'misfit-munchies', 'car-ching'];
+const experimentOrder = [
   'equity-research',
   'flight-delays',
-  'car-ching',
   'food-container',
-  'james-ai',
   'bestdayusa',
   'drinky',
   'werkhaus',
 ];
 
-export const projects = order.map((slug) => sourceProjects.find((p) => p.slug === slug));
+const bySlug = (slug) => sourceProjects.find((p) => p.slug === slug);
+
+export const selectedProjects = selectedOrder.map(bySlug);
+export const experimentProjects = experimentOrder.map(bySlug);
+export const projects = [...selectedProjects, ...experimentProjects];
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
 
 export const getProjectIndex = (slug) =>
   projects.findIndex((p) => p.slug === slug);
 
+// The six-tile collage on the home hero.
 export const featuredProjects = [
   'phonebelt',
-  'equity-research',
-  'drinky',
+  'harvey',
   'misfit-munchies',
   'car-ching',
-  'james-ai',
-].map((slug) => getProject(slug));
+  'food-container',
+  'bestdayusa',
+].map(bySlug);
