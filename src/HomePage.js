@@ -88,8 +88,8 @@ const HomePage = () => {
           A few things I've built.
         </h1>
         <p className="mb-10 max-w-2xl text-lg leading-relaxed text-muted">
-          Director of Product at PureSpectrum. Hardware founder before that,
-          with a detour through M&amp;A.
+          I'm a Director of Product at PureSpectrum. These are the things I've
+          built along the way.
         </p>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {featuredProjects.map((project, index) => (
@@ -178,7 +178,7 @@ const HomePage = () => {
       <div className="relative flex w-full items-center justify-center py-20" id="contact">
         <div className="relative z-10 mx-auto max-w-4xl px-4">
           <h2 className="mb-6 font-display text-3xl font-semibold text-cream md:text-4xl">Contact</h2>
-          <p className="mb-6 text-lg text-muted">If something here sparked an idea, let's talk it over coffee:</p>
+          <p className="mb-6 text-lg text-muted">If any of this is worth a conversation, I'm easy to reach:</p>
           <ul className="space-y-4 text-lg text-cream">
             <li>
               <span className="font-semibold">Email:</span>{' '}
