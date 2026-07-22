@@ -312,14 +312,17 @@ const sourceProjects = [
     tagline:
       'Turning surplus and imperfect produce into affordable, nutritious dog treats.',
     summary:
-      'Misfit Munchies turns surplus and imperfect produce into dog treats. At the May 2024 New Venture Fair, the team took home Best MVP and Best Team.',
+      "Misfit Munchies turns surplus and imperfect produce into dog treats. The team won Best MVP and Best Team at Cal Lutheran's 2024 New Venture Fair, then two more awards at the 2025 fair.",
     hero: '/NewVentureFair.jpg',
     meta: {
       role: 'Team',
-      timeline: '2024',
+      timeline: '2024 to 2025',
       focus: ['Sustainability', 'CPG'],
     },
-    highlights: ['Best MVP, New Venture Fair (May 2024)', 'Best Team'],
+    highlights: [
+      'Best MVP & Best Team, Cal Lutheran New Venture Fair (2024)',
+      'Best Brochure & Best Sign (2025)',
+    ],
     sections: [
       {
         body: (
@@ -335,6 +338,16 @@ const sourceProjects = [
             to waste.
           </>
         ),
+      },
+    ],
+    links: [
+      {
+        label: "Cal Lutheran's New Venture Fair winners",
+        href: 'https://www.callutheran.edu/centers/entrepreneurship/programs/new-venture-winners.html',
+      },
+      {
+        label: 'Instagram: @misfitmunchiestreats',
+        href: 'https://www.instagram.com/misfitmunchiestreats/',
       },
     ],
   },
@@ -545,7 +558,7 @@ const sourceProjects = [
 // per-project prev/next navigation both follow it. The home grid renders in
 // two tiers so the flagship work isn't diluted by the smaller experiments.
 const selectedOrder = ['phonebelt', 'harvey', 'misfit-munchies', 'car-ching'];
-const experimentOrder = [
+const moreOrder = [
   'equity-research',
   'flight-delays',
   'food-container',
@@ -557,8 +570,8 @@ const experimentOrder = [
 const bySlug = (slug) => sourceProjects.find((p) => p.slug === slug);
 
 export const selectedProjects = selectedOrder.map(bySlug);
-export const experimentProjects = experimentOrder.map(bySlug);
-export const projects = [...selectedProjects, ...experimentProjects];
+export const moreProjects = moreOrder.map(bySlug);
+export const projects = [...selectedProjects, ...moreProjects];
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
 

@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.jecolemans.com/sitemap.xml
+Sitemap: https://jecolemans.com/sitemap.xml

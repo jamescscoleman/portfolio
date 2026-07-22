@@ -1,6 +1,6 @@
 # jecolemans.com
 
-Personal portfolio of James Coleman — [www.jecolemans.com](https://www.jecolemans.com).
+Personal portfolio of James Coleman — [jecolemans.com](https://jecolemans.com).
 
 ## Stack
 

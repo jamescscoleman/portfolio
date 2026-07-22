@@ -4,24 +4,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { selectedProjects, experimentProjects, featuredProjects } from './data/projects';
+import { selectedProjects, moreProjects, featuredProjects } from './data/projects';
 
-const ProjectCard = ({ project, index }) => (
+const ProjectCard = ({ project, index, compact = false }) => (
   <motion.div
     initial={{ opacity: 0, y: 18 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-60px' }}
-    transition={{ duration: 0.4, delay: (index % 2) * 0.08 }}
+    transition={{ duration: 0.4, delay: (index % (compact ? 3 : 2)) * 0.08 }}
   >
     <Link
       to={`/projects/${project.slug}`}
-      className="group flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-colors duration-300 hover:border-accent/40"
+      className={`group flex h-full flex-col rounded-xl border border-hairline bg-surface transition-colors duration-300 hover:border-accent/40 ${
+        compact ? 'p-5' : 'p-6'
+      }`}
     >
       <div className="relative overflow-hidden rounded-lg">
         <img
           src={project.hero}
           alt={`${project.title}`}
-          className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+            compact ? 'h-44' : 'h-72'
+          }`}
           loading="lazy"
         />
         {project.status && (
@@ -30,8 +34,16 @@ const ProjectCard = ({ project, index }) => (
           </span>
         )}
       </div>
-      <h3 className="mt-5 font-display text-2xl font-semibold text-cream">{project.shortTitle}</h3>
-      <p className="mt-2 flex-1 leading-relaxed text-muted">{project.summary}</p>
+      <h3
+        className={`mt-5 font-display font-semibold text-cream ${
+          compact ? 'text-xl' : 'text-2xl'
+        }`}
+      >
+        {project.shortTitle}
+      </h3>
+      <p className={`mt-2 flex-1 leading-relaxed text-muted ${compact ? 'text-sm' : ''}`}>
+        {project.summary}
+      </p>
       <span className="mt-5 inline-flex items-center gap-1.5 text-accent transition-colors group-hover:text-accent-soft">
         View project
         <ArrowUpRight
@@ -144,22 +156,19 @@ const HomePage = () => {
       <div className="flex w-full flex-col items-center justify-center py-20" id="projects">
         <h2 className="mb-2 font-display text-3xl font-semibold text-cream md:text-4xl">Projects</h2>
         <p className="mb-10 max-w-2xl px-4 text-center leading-relaxed text-muted">
-          A collection of things I've built alongside my career: startups, hardware, data, and a few odd experiments. Click any project to read the full story.
+          A collection of things I've built alongside my career: startups, hardware, games, and data. Click any project to read the full story.
         </p>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
           {selectedProjects.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
-        <h3 className="mb-2 mt-16 font-display text-2xl font-semibold text-cream">
-          Smaller experiments
+        <h3 className="mb-8 mt-16 font-display text-2xl font-semibold text-cream">
+          More projects
         </h3>
-        <p className="mb-10 max-w-2xl px-4 text-center leading-relaxed text-muted">
-          Weekend builds, class projects, and one very specific bet.
-        </p>
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
-          {experimentProjects.map((project, index) => (
-            <ProjectCard key={project.slug} project={project} index={index} />
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:grid-cols-3">
+          {moreProjects.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} compact />
           ))}
         </div>
       </div>
