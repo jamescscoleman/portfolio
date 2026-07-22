@@ -129,10 +129,10 @@ const HomePage = () => {
         <div className="relative z-10 mx-auto max-w-4xl px-4">
           <h2 className="mb-6 font-display text-3xl font-semibold text-cream md:text-4xl">About Me</h2>
           <p className="mb-4 text-lg leading-relaxed text-cream/85">
-            I build products, specifically the ones that don't exist yet. I took the scenic route here, and each stop set up the next. Immediately after graduating undergrad I founded a hardware startup: zero to one, from a blank page to a shipped physical product. Hardware is unforgiving, so it taught me that mistakes are expensive and you can't patch an object after it's out the door. Then I moved into mergers and acquisitions, where I learned to see what actually makes a business valuable. From there I moved into software, where iteration is cheap and a good idea can reach people in days. AI collapsed that clock again: what took weeks now takes an afternoon.
+            I build products that don't exist yet, a habit I acquired the hard way. My first company was a hardware startup, founded right after undergrad, where I learned that atoms don't take patches: once the product ships, your mistakes ship with it. M&amp;A taught me what a business is actually worth. Software taught me mercy: iteration in days, not months.
           </p>
           <p className="mb-6 text-lg leading-relaxed text-cream/85">
-            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research, and it's zero to one all over again. That's the part I find most exciting: taking what's newly possible and turning it into products an entire industry can use.
+            AI turned days into an afternoon. Now I lead the Innovation product team at PureSpectrum, building AI-driven products for market research. It's zero to one all over again. Happily, the kind you can patch.
           </p>
           <h3 className="mb-3 font-display text-2xl font-semibold text-cream">Philosophies</h3>
           <ul className="list-disc list-inside space-y-1 text-lg text-muted marker:text-accent">
