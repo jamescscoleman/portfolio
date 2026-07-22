@@ -178,7 +178,7 @@ const HomePage = () => {
       <div className="relative flex w-full items-center justify-center py-20" id="contact">
         <div className="relative z-10 mx-auto max-w-4xl px-4">
           <h2 className="mb-6 font-display text-3xl font-semibold text-cream md:text-4xl">Contact</h2>
-          <p className="mb-6 text-lg text-muted">If any of this is worth a conversation, I'm easy to reach:</p>
+          <p className="mb-6 text-lg text-muted">Always up for sharing ideas over coffee:</p>
           <ul className="space-y-4 text-lg text-cream">
             <li>
               <span className="font-semibold">Email:</span>{' '}
