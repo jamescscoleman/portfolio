@@ -132,7 +132,7 @@ const HomePage = () => {
             I build products, specifically the ones that don't exist yet. I took the scenic route here, and each stop set up the next. Immediately after graduating undergrad I founded a hardware startup: zero to one, from a blank page to a shipped physical product. Hardware is unforgiving, so it taught me that mistakes are expensive and you can't patch an object after it's out the door. Then I moved into mergers and acquisitions, where I learned to see what actually makes a business valuable. From there I moved into software, where iteration is cheap and a good idea can reach people in days. AI collapsed that clock again: what took weeks now takes an afternoon.
           </p>
           <p className="mb-6 text-lg leading-relaxed text-cream/85">
-            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research, and it's zero to one all over again: less about polishing what exists, more about creating capabilities that weren't possible before. That's the part I find most exciting: taking what's newly possible and turning it into products an entire industry can use.
+            Today I lead the Innovation product team at PureSpectrum, building AI-driven products for market research, and it's zero to one all over again. That's the part I find most exciting: taking what's newly possible and turning it into products an entire industry can use.
           </p>
           <h3 className="mb-3 font-display text-2xl font-semibold text-cream">Philosophies</h3>
           <ul className="list-disc list-inside space-y-1 text-lg text-muted marker:text-accent">
