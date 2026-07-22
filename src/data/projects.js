@@ -315,7 +315,7 @@ const sourceProjects = [
       "Misfit Munchies turns surplus and imperfect produce into dog treats. The team won Best MVP and Best Team at Cal Lutheran's 2024 New Venture Fair, then two more awards at the 2025 fair.",
     hero: '/NewVentureFair.jpg',
     meta: {
-      role: 'Team',
+      role: 'Team member',
       timeline: '2024 to 2025',
       focus: ['Sustainability', 'CPG'],
     },
@@ -336,6 +336,16 @@ const sourceProjects = [
             from farmers and grocery stores and make affordable, nutritious
             treats from it. It's a practical use for food that would otherwise go
             to waste.
+          </>
+        ),
+      },
+      {
+        body: (
+          <>
+            The credit here belongs to my teammates. Every award in that photo
+            was earned by the whole table, and the sharpest thinking on the
+            product and the pitch came from the people standing next to me. I
+            was lucky to be part of it.
           </>
         ),
       },
@@ -514,9 +524,9 @@ const sourceProjects = [
     title: 'A 2020 Options Bet',
     shortTitle: '2020 Options Bet',
     tagline:
-      'A calculated bet during the 2020 dislocation, built on a thesis about institutional inertia.',
+      "The hedge fund career I didn't pursue, distilled into one trade.",
     summary:
-      'A calculated bet during the 2020 market dislocation: a thesis around volatility and institutional inertia that returned roughly 1000% over five months.',
+      'I once wanted to run a hedge fund; instead the research habit became a hobby. In early 2020, that hobby met a firsthand read on the pandemic, and the puts I bought returned roughly 1000% in five months.',
     hero: '/EquityResearch.JPG',
     meta: {
       role: 'Individual Investor',
@@ -527,25 +537,35 @@ const sourceProjects = [
       {
         body: (
           <>
-            During the early months of the 2020 pandemic, I paired my finance
-            coursework at UC Berkeley with a simple thesis: in a period of
-            extreme dislocation, large institutional funds lacked the agility to
-            quickly shift their established strategies, creating mispriced
-            opportunities for a nimble individual investor. I built positions
-            around that thesis using options and futures: calculated, but
-            admittedly risky.
+            For a stretch of college I thought I'd end up running money. Equity
+            research was my default free-time activity: valuations for fun, a
+            close watch on the news, all of it pointed at an eventual hedge
+            fund. Late in undergrad I let that ambition go. I wanted to build
+            products more than portfolios, but the research habit never left.
           </>
         ),
       },
       {
         body: (
           <>
-            From January to May, the trades returned roughly 1000%, aggressive
-            enough to (dis)honorably earn me a feature on the r/WallStreetBets
-            subreddit. The screenshot above is one week of it: up 93% in the
-            last week of February. I'm not a stock guru, and I treat it as
-            exactly what it was, a specific thesis for a specific moment, but it
-            remains a useful reminder of what conviction plus timing can do.
+            Then January 2020 arrived. At UC Berkeley the pandemic was not an
+            abstract headline: many classmates had family in China and were
+            living it secondhand, and campus behavior had already changed while
+            the S&amp;P sat near all-time highs. The market was weeks behind
+            what campus already knew. I concluded it was a once-in-a-lifetime
+            mispricing, and I bought puts ahead of the crash.
+          </>
+        ),
+      },
+      {
+        body: (
+          <>
+            From January to May the trades returned roughly 1000%, aggressive
+            enough to (dis)honorably earn me a feature on r/WallStreetBets. The
+            screenshot above is one week of it: up 93% in the last week of
+            February. I haven't tried to repeat it. It was a specific read on a
+            specific moment, but it's the clearest evidence I have of what
+            paying attention plus conviction can do.
           </>
         ),
       },
