@@ -43,12 +43,6 @@ const sourceProjects = [
       'Non-dilutive funding secured',
     ],
     stages: ['POC', 'MVP', 'Prototype', 'Final Product'],
-    links: [
-      {
-        label: 'Visit the PhoneBelt website',
-        href: 'https://phonebelt-site.jamescscoleman.chatgpt.site',
-      },
-    ],
     sections: [
       {
         heading: 'Why commercial driving is a different problem',
