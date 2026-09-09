@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { selectedProjects, moreProjects, featuredProjects } from './data/projects';
+import { selectedProjects, moreProjects } from './data/projects';
 
 const ProjectCard = ({ project, index, compact = false }) => (
   <motion.div
@@ -57,7 +57,7 @@ const ProjectCard = ({ project, index, compact = false }) => (
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <div id="top" className="min-h-screen bg-ink text-cream">
       {/* Slim top bar */}
       <header className="sticky top-0 z-30 border-b border-hairline/60 bg-ink/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-16">
@@ -74,46 +74,6 @@ const HomePage = () => {
           </nav>
         </div>
       </header>
-
-      {/* Home Section */}
-      <div
-        id="top"
-        className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-6 py-20 md:px-16"
-      >
-        <p className="mb-4 text-sm uppercase tracking-[0.25em] text-accent">James Coleman</p>
-        <h1 className="mb-5 font-display text-5xl font-semibold tracking-tight text-cream md:text-7xl">
-          A few things I've built.
-        </h1>
-        <p className="mb-10 max-w-2xl text-lg leading-relaxed text-muted">
-          I'm a Director of Product at PureSpectrum. These are the things I've
-          built along the way.
-        </p>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-          {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
-            >
-              <Link
-                to={`/projects/${project.slug}`}
-                className="group relative block overflow-hidden rounded-lg"
-              >
-                <img
-                  src={project.hero}
-                  alt={`${project.title}`}
-                  className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-56"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                <span className="absolute bottom-3 left-4 right-4 font-semibold text-cream">
-                  {project.shortTitle}
-                </span>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* Projects Section */}
       <div className="flex w-full flex-col items-center justify-center py-20" id="projects">
