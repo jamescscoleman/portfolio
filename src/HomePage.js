@@ -65,9 +65,6 @@ const HomePage = () => {
             James Coleman
           </a>
           <nav className="flex items-center gap-6 text-sm text-muted">
-            <a href="#about" className="transition-colors hover:text-cream">
-              About
-            </a>
             <a href="#projects" className="transition-colors hover:text-cream">
               Projects
             </a>
@@ -119,26 +116,7 @@ const HomePage = () => {
       </div>
 
       {/* About Me Section */}
-      <div className="relative flex w-full items-center justify-center py-20" id="about">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 h-full w-full bg-cover bg-center opacity-25"
-          style={{ backgroundImage: 'url(/Graduation-BlackWhite.jpg)' }}
-        ></div>
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-4xl px-4">
-          <h2 className="mb-6 font-display text-3xl font-semibold text-cream md:text-4xl">About Me</h2>
-          <p className="mb-4 text-lg leading-relaxed text-cream/85">
-            I build products that don't exist yet, a habit I acquired the hard way. My first company was a hardware startup, founded right after undergrad, where I learned that atoms don't take patches: once the product ships, your mistakes ship with it. M&amp;A taught me what a business is actually worth. Software taught me mercy: iteration in days, not months.
-          </p>
-          <p className="mb-6 text-lg leading-relaxed text-cream/85">
-            AI turned days into an afternoon. Now I lead the Innovation product team at PureSpectrum, building AI-driven products for market research. It's zero to one all over again. Happily, the kind you can patch.
-          </p>
-        </div>
-      </div>
-
-      {/* Projects Section */}
-      <div className="flex w-full flex-col items-center justify-center py-20" id="projects">
+      <div className="relative flex w-full items-center justify-center py-20" id="arojects">
         <h2 className="mb-2 font-display text-3xl font-semibold text-cream md:text-4xl">Projects</h2>
         <p className="mb-10 max-w-2xl px-4 text-center leading-relaxed text-muted">
           A collection of things I've built alongside my career: startups, hardware, games, and data. Click any project to read the full story.
