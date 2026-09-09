@@ -115,8 +115,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* About Me Section */}
-      <div className="relative flex w-full items-center justify-center py-20" id="arojects">
+      {/* Projects Section */}
+      <div className="flex w-full flex-col items-center justify-center py-20" id="projects">
         <h2 className="mb-2 font-display text-3xl font-semibold text-cream md:text-4xl">Projects</h2>
         <p className="mb-10 max-w-2xl px-4 text-center leading-relaxed text-muted">
           A collection of things I've built alongside my career: startups, hardware, games, and data. Click any project to read the full story.
